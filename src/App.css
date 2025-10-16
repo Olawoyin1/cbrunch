@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  /* border: 1px solid red ; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  
+} 
+
+.login-header{
+  font-family: "Mulish", sans-serif;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.5rem)); /* Moves half the width */
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    linear infinite var(--animation-direction, forwards);
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    linear infinite var(--animation-direction, forwards);
+}
+
+/* ✅ Smooth pause on hover */
+.scroller.group:hover .animate-scroll {
+  animation-play-state: paused;
+}
