@@ -1,4 +1,4 @@
-import { MessageSquare, Briefcase, Users, GraduationCap, Camera, Heart, Gamepad2, Coffee, UserCheck, ChevronRight } from 'lucide-react';
+import { MessageSquare, Briefcase, Users, GraduationCap, Camera, Heart, Gamepad2, Coffee, UserCheck } from 'lucide-react';
 
 export default function Features() {
   const featuredItems = [
