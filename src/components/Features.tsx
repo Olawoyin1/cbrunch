@@ -74,8 +74,8 @@ export default function Features() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-rose-500/10 rounded-full -mr-16 -mt-16"></div>
 
                 <div className="relative flex gap-3">
-                  <div className="shrink-0 w-10 h-10 mb-6 bg-gradient-to-br from-orange-500 to-rose-500 rounded flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <feature.icon className="w-5 h-5 text-white" />
+                  <div className="shrink-0 w-10 h-10 mb-6 bg-gradient-to-br from-gray-200 0 rounded flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 hover:shadow-lg">
+                    <feature.icon className="w-5 h-5 " />
                   </div>
                   <div>
 

@@ -13,7 +13,7 @@ export default function Speakers() {
   const speakers = [
     {
       name: "Jola Ayeye",
-      nickname: "(Jollz)",
+      nickname: "",
       title: "Tech Entrepreneur",
       image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=300"
     },
@@ -29,12 +29,12 @@ export default function Speakers() {
       title: "HR Leader",
       image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300"
     },
-    {
-      name: "Babajide Duroshola",
-      nickname: "",
-      title: "Business Strategist",
-      image: "https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg?auto=compress&cs=tinysrgb&w=300"
-    },
+    // {
+    //   name: "Babajide Duroshola",
+    //   nickname: "",
+    //   title: "Business Strategist",
+    //   image: "https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg?auto=compress&cs=tinysrgb&w=300"
+    // },
     {
       name: "Peace Itimi",
       nickname: "",
@@ -99,14 +99,14 @@ export default function Speakers() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
               {speakers.map((speaker, index) => (
                 <div
                   key={index}
                   className="group relative"
                 >
                   <div className="relative rounded overflow-hidden  hover:shadow transition-all duration-500 hover:-translate-y-3">
-                    <div className="aspect-[3/4] relative overflow-hidden">
+                    <div className="aspect-[3/4] min-h-[300px] relative overflow-hidden">
                       <img
                         src={speaker.image}
                         alt={speaker.name}

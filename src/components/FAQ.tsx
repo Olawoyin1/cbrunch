@@ -60,7 +60,7 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-2xl overflow-hidden border-2 border-gray-100 hover:border-orange-200 transition-all duration-300"
+                className="bg-gray-50 rounded overflow-hidden border-2 border-gray-100 hover:border-orange-200 transition-all duration-300"
               >
                 <button
                   className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"

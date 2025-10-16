@@ -57,12 +57,12 @@ export default function Audience() {
                 key={index}
                 className="group relative bg-white rounded border border-gray-300 hover:border-transparent  hover:shadow transition-all duration-300 overflow-hidden"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${audience.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br  transition-opacity duration-300`}></div>
                 <div className="relative p-6 flex flex-col items-center text-center">
-                  <div className={`w-14 h-14 mb-4 bg-gradient-to-br ${audience.color} rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300`}>
-                    <audience.icon className="w-7 h-7 text-white" />
+                  <div className={`w-14 h-14 mb-4 bg-gray-100 rounded flex items-center justify-center  transition-all duration-300`}>
+                    <audience.icon className="w-7 h-7" />
                   </div>
-                  <p className="font-bold text-gray-900 group-hover:text-white transition-colors duration-300">
+                  <p className="font-bold text-gray-900  transition-colors duration-300">
                     {audience.text}
                   </p>
                 </div>
@@ -77,9 +77,9 @@ export default function Audience() {
             </div>
           </div>
 
-          <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded overflow-hidden shadow">
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full filter blur-3xl"></div>
+              <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded filter blur-3xl"></div>
               <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-500 rounded-full filter blur-3xl"></div>
             </div>
 
@@ -99,7 +99,7 @@ export default function Audience() {
                     key={index}
                     className="text-center group"
                   >
-                    <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${benefit.gradient} rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl`}>
+                    <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br  rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl`}>
                       <benefit.icon className="w-10 h-10 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-3">{benefit.title}</h4>

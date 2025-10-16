@@ -78,7 +78,7 @@ const About = () => {
             >
               <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  Career Brunch isn't just another networking event—it's a{" "}
+                  Career Brunch isn't just another networking event it's a{" "}
                   
                     career-tech and lifestyle movement
                  
