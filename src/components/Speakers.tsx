@@ -15,19 +15,19 @@ export default function Speakers() {
       name: "Jola Ayeye",
       nickname: "",
       title: "Tech Entrepreneur",
-      image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=300"
+      image: "../../Images/s1.jpeg"
     },
     {
       name: "Tayo Oviosu",
       nickname: "",
       title: "Fintech Pioneer",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300"
+      image: "../../Images/s2.jpeg"
     },
     {
       name: "Tosin Olaseinde",
       nickname: "",
       title: "HR Leader",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300"
+      image: "../../Images/s3.jpeg"
     },
     // {
     //   name: "Babajide Duroshola",
@@ -39,16 +39,16 @@ export default function Speakers() {
       name: "Peace Itimi",
       nickname: "",
       title: "Career Coach",
-      image: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=300"
+      image: "../../Images/s4.jpeg"
     }
   ];
 
   return (
     <section id="speakers" className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 ">
+        <div className="">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-6 px-6 py-3 bg-white rounded border border-gray-300">
+            <div className="inline-flex items-center gap-2 mb-6  py-3 bg-white rounded border border-gray-300">
               <Mic2 className="w-5 h-5 text-orange-600" />
               <span className="text-sm font-semibold text-gray-900 tracking-wide">SPEAKERS & GUESTS</span>
             </div>
