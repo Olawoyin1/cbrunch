@@ -3,12 +3,32 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export default function Gallery() {
   const images = [
-    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "../../Images/g0.jpg",
+    "../../Images/g1.jpg",
+    "../../Images/g2.jpg",
+    "../../Images/g3.jpg",
+    "../../Images/g4.jpg",
+    "../../Images/g5.jpg",
+    "../../Images/g6.jpg",
+    "../../Images/g7.jpg",
+    "../../Images/g8.jpg",
+    "../../Images/g9.jpg",
+    // "../../public/Images/g0.jpg",
+    // "../../public/Images/g0.jpg",
+  ];
+  const images2 = [
+    "../../Images/r0.jpg",
+    "../../Images/r1.jpg",
+    "../../Images/r2.jpg",
+    "../../Images/r3.jpg",
+    "../../Images/r4.jpg",
+    "../../Images/r5.jpg",
+    "../../Images/r6.jpg",
+    "../../Images/r7.jpg",
+    "../../Images/r8.jpg",
+    "../../Images/r9.jpg",
+    // "../../public/Images/g0.jpg",
+    // "../../public/Images/g0.jpg",
   ];
 
   return (
@@ -38,7 +58,7 @@ export default function Gallery() {
           </div>
            <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <InfiniteMovingCards
-              items={images}
+              items={images2}
               direction="left"
               speed="slow"
             />

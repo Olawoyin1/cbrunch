@@ -7,35 +7,35 @@ export default function WhatsNew() {
       title: "Career-Tech Experience",
       description: "Interactive skill-building labs and recruitment zones",
       gradient: "from-orange-500 to-rose-500",
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "../../Images/career.jpg"
     },
     {
       icon: Dumbbell,
       title: "Lifestyle Lounge",
       description: "Wellness, fashion, finance, and career therapy",
       gradient: "from-amber-500 to-orange-500",
-      image: "https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "../../Images/lifestyle.jpg"
     },
     {
       icon: Zap,
       title: "AI-Powered Reviews",
       description: "CV reviews, mock interviews, and speed networking",
       gradient: "from-rose-500 to-pink-500",
-      image: "https://images.pexels.com/photos/8867482/pexels-photo-8867482.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "../../Images/review.jpg"
     },
     {
       icon: Camera,
       title: "LinkedIn Photo Booth",
       description: "Professional headshots for your career profiles",
       gradient: "from-pink-500 to-rose-500",
-      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "../../Images/photo.jpg"
     },
     {
       icon: Presentation,
       title: "Career Brunch Pitch",
       description: "Spotlight for innovators breaking into tech",
       gradient: "from-orange-600 to-amber-600",
-      image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "../../Images/career.jpg"
     }
   ];
 
@@ -58,7 +58,7 @@ export default function WhatsNew() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2  lg:grid-cols-3 gap-8 mb-12">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -70,7 +70,7 @@ export default function WhatsNew() {
                     alt={feature.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-80`}></div> */}
+                  <div className={`absolute inset-0 bg-gradient-to-t bg-black/30 opacity-80`}></div> 
                   <div className="absolute top-6 right-6 w-14 h-14 bg-white/20 backdrop-blur-md rounded flex items-center justify-center">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>

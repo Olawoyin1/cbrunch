@@ -53,7 +53,7 @@ const About = () => {
             <div className="relative animate-slide-up">
               <div className="relative  overflow-hidden shadow-lg group">
                 <img
-                  src="../../Images/about-image.jpg"
+                  src="../../Images/about.jpg"
                   alt="Career Brunch Community"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
