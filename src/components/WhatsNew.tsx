@@ -76,7 +76,7 @@ export default function WhatsNew() {
                   </div>
                 </div>
                 <div className="p-4 md:p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 ">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

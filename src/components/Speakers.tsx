@@ -48,11 +48,11 @@ export default function Speakers() {
       <div className="max-w-7xl mx-auto px-4 ">
         <div className="">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-6  py-3 bg-white rounded border border-gray-300">
+            <div className="inline-flex items-center gap-2 mb-6 px-4  py-3 bg-white rounded border border-gray-300">
               <Mic2 className="w-5 h-5 text-orange-600" />
               <span className="text-sm font-semibold text-gray-900 tracking-wide">SPEAKERS & GUESTS</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-2">
               Learn from Industry Leaders
             </h2>
             <p className="text-base md:text-lg text-gray-600">
@@ -91,10 +91,10 @@ export default function Speakers() {
 
           <div className="relative">
             <div className="text-center mb-12">
-              <h3 className="text-2xl sm:text-5xl font-bold mb-4 text-gray-900">
+              <h3 className="text-2xl sm:text-5xl font-bold mb-2 text-gray-900">
                 Meet Your <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">Expected Guests</span>
               </h3>
-              <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
                 Get ready to learn from pioneers, innovators, and thought leaders shaping the future of work
               </p>
             </div>

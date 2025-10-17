@@ -1,21 +1,21 @@
 
-import { Users, Target, Sparkles } from "lucide-react";
-// import aboutImage from "@/assets/about-image.jpg";
-// import patternImage from "@/assets/pattern-about.jpg";
+import { CgCommunity } from "react-icons/cg";
+import { PiTarget } from "react-icons/pi";
+import { RiSparkling2Line } from "react-icons/ri";
 
 const highlights = [
   {
-    icon: Users,
+    icon: CgCommunity,
     title: "Community",
     description: "Connect with professionals, founders, and industry leaders",
   },
   {
-    icon: Target,
+    icon: PiTarget,
     title: "Purpose",
     description: "Shape the future of work in Africa through immersive experiences",
   },
   {
-    icon: Sparkles,
+    icon: RiSparkling2Line,
     title: "Impact",
     description: "Gain clarity, confidence, and community for your career journey",
   },
@@ -42,9 +42,7 @@ const About = () => {
                 Career Brunch
               </span>
             </h2>
-            <p className="text-xl md:text-2xl font-semibold text-foreground max-w-3xl mx-auto">
-              Building Careers. Creating Connections. Bridging Generations.
-            </p>
+            
           </div>
 
           {/* Main Content Grid */}
@@ -76,7 +74,10 @@ const About = () => {
               className="space-y-6 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <p className="text-xl md:text-2xl font-semibold text-foreground">
+              Building Careers. Creating Connections. Bridging Generations.
+            </p>
+              <div className="space-y-4 text-sm md:text-lg leading-relaxed text-muted-foreground">
                 <p>
                   Career Brunch isn't just another networking event it's a{" "}
                   
@@ -110,7 +111,7 @@ const About = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14  bg-gradient-primary flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-300">
-                  <highlight.icon className="w-7 h-7 text-primary-foreground" />
+                  <highlight.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">

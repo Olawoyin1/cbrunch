@@ -1,4 +1,7 @@
-import { Cpu, Briefcase, Rocket } from 'lucide-react';
+
+import { VscRocket } from "react-icons/vsc";
+import { LuBriefcaseBusiness } from "react-icons/lu";
+import { BsCpu } from "react-icons/bs";
 
 export default function Theme() {
   return (
@@ -11,7 +14,7 @@ export default function Theme() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 bg-white/10 backdrop-blur-sm rounded">
-            <Rocket className="w-5 h-5 text-orange-400" />
+            <VscRocket className="w-5 h-5 text-orange-400" />
             <span className="text-sm font-semibold tracking-wide">2025 THEME</span>
           </div>
 
@@ -30,7 +33,7 @@ export default function Theme() {
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-rose-500 rounded-lg flex items-center justify-center">
-                <Cpu className="w-6 h-6" />
+                <BsCpu className="w-6 h-6" />
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-lg mb-2">Tech Innovation</h3>
@@ -40,7 +43,7 @@ export default function Theme() {
 
             <div className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
-                <Briefcase className="w-6 h-6" />
+                <LuBriefcaseBusiness className="w-6 h-6" />
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-lg mb-2">Career Evolution</h3>
