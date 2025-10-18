@@ -15,6 +15,7 @@ import Gallery from "./components/Gallery";
 import Features from "./components/Features";
 import Audience from "./components/Audience";
 import Speakers from "./components/Speakers";
+import EventDetails from "./components/EventDetails";
 // import About from "./components/About";
 // import AnimatedRoutes from "./layouts/AnimatedRoutes";
 
@@ -31,6 +32,7 @@ function App() {
       <Features />
       <Audience />
       <FAQ />
+      <EventDetails />
       <Footer />
       {/* <WhatsNew />
       <EventFeatures />
