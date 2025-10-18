@@ -14,7 +14,7 @@ const features = [
   { icon: Lightbulb, title: "Hands-on Masterclasses", description: "Learn practical skills from industry experts in real-time" },
 ];
 
-const rotations = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2", "rotate-0"];
+const rotations = ["md:rotate-1", "md:-rotate-1", "md:rotate-2", "md:-rotate-2", "md:rotate-0"];
 
 const WhatsNew = () => {
   return (
@@ -40,13 +40,23 @@ const WhatsNew = () => {
           </div>
 
         {/* Floating Cards */}
-        <div className=" relative w-full flex flex-wrap justify-center gap-6 md:gap-10">
+        <div 
+          className=" relative w-full flex flex-wrap justify-center gap-6 md:gap-10"
+        >
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]}`}
+              // className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]}`}
+              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]} w-full md:w-auto`}
+
+              // style={{
+              //   top: `${(idx % 3) * -10}px`,
+              //   zIndex: 10 - idx,
+              // }}
+
+
               style={{
-                top: `${(idx % 3) * -10}px`,
+                top: window.innerWidth >= 768 ? `${(idx % 3) * -10}px` : "0px",
                 zIndex: 10 - idx,
               }}
             >

@@ -95,11 +95,11 @@ export default function Speakers() {
                   className="group relative"
                 >
                   <div className="relative rounded overflow-hidden  hover:shadow transition-all duration-500 hover:-translate-y-3">
-                    <div className="md:aspect-[3/4] h-[300px] relative overflow-hidden">
+                    <div className="rounded-3xl h-[350px] relative overflow-hidden">
                       <img
                         src={speaker.image}
                         alt={speaker.name}
-                        className="w-full h-[300px] md:h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-[350px] md:h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
 

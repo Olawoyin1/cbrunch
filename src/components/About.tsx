@@ -110,7 +110,7 @@ const About = () => {
                 className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14  bg-gradient-primary flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-300">
+                <div className="w-14 h-14  bg-gradient-primary flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300">
                   <highlight.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl text-center font-bold mb-2">{highlight.title}</h3>
