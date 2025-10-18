@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-hero z-0" />
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-25 md:py-32">
+      <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7c3bed]/10 border border-[#7c3bed]/20 text-sm font-medium animate-scale-in">

@@ -1,15 +1,8 @@
-import { Mic2, Building2 } from 'lucide-react';
+import { Mic2 } from 'lucide-react';
+import Brand from './Brand';
 
 export default function Speakers() {
-  const companies = [
-    { name: "Spotify", logo: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=200" },
-    { name: "PiggyVest", logo: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=200" },
-    { name: "MTN", logo: "https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=200" },
-    { name: "McKinsey", logo: "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=200" },
-    { name: "PaidHR", logo: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200" },
-    { name: "Kredete", logo: "https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=200" }
-  ];
-
+  
   const speakers = [
     {
       name: "Jola Ayeye",
@@ -60,7 +53,9 @@ export default function Speakers() {
             </p>
           </div>
 
-          <div className="mb-16">
+          <Brand />
+
+          {/* <div className="mb-16">
             <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-10 text-center">
               Featuring Voices From:
             </h3>
@@ -80,21 +75,15 @@ export default function Speakers() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
-              <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-50 to-rose-50 rounded border border-orange-200">
-                <span className="text-sm font-bold bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
-                  + many more amazing companies
-                </span>
-              </span>
-            </div>
-          </div>
+            
+          </div> */}
 
           <div className="relative">
             <div className="text-center mb-12">
               <h3 className="text-2xl sm:text-5xl font-bold mb-2 text-gray-900">
                 Meet Your <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">Expected Guests</span>
               </h3>
-              <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-sm md:text-xl text-gray-600 max-w-2xl mx-auto">
                 Get ready to learn from pioneers, innovators, and thought leaders shaping the future of work
               </p>
             </div>
@@ -106,11 +95,11 @@ export default function Speakers() {
                   className="group relative"
                 >
                   <div className="relative rounded overflow-hidden  hover:shadow transition-all duration-500 hover:-translate-y-3">
-                    <div className="aspect-[3/4] min-h-[300px] relative overflow-hidden">
+                    <div className="md:aspect-[3/4] h-[300px] relative overflow-hidden">
                       <img
                         src={speaker.image}
                         alt={speaker.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-[300px] md:h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
 

@@ -25,7 +25,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 md:py-32 bg-secondary/30 relative overflow-hidden"
+      className="py-20  relative overflow-hidden"
     >
       {/* Decorative Pattern */}
       <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
@@ -103,18 +103,18 @@ const About = () => {
           </div>
 
           {/* Highlights Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16 animate-fade-in">
+          <div className="grid text-center md:grid-cols-3 gap-6 mb-16 animate-fade-in">
             {highlights.map((highlight, index) => (
               <div
                 key={highlight.title}
-                className="group bg-white border border-gray-300  p-6 text-center  hover:shadow transition-all duration-300 hover:border-primary/50 animate-scale-in"
+                className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14  bg-gradient-primary flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-300">
-                  <highlight.icon className="w-8 h-8" />
+                  <highlight.icon className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <h3 className="text-xl text-center font-bold mb-2">{highlight.title}</h3>
+                <p className="text-muted-foreground tex-center text-sm leading-relaxed">
                   {highlight.description}
                 </p>
               </div>
