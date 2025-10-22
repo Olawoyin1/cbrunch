@@ -8,30 +8,30 @@ import { LuTickets } from "react-icons/lu";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[800px] md:min-h-screen flex items-center text-white justify-center overflow-hidden">
       {/* white Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="../../Images/hero-event.jpg"
+          src="../../Images/hero1.jpg"
           alt="Career Brunch 2.0 Event"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/50" />
       </div>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-hero z-0" />
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 md:py-32">
+      <div className="container relative z-10 px-4 py-12 md:py-32">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7c3bed]/10 border border-[#7c3bed]/20 text-sm font-medium animate-scale-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-4xl rounded-full bg-[#7c3bed]/10 border border-[#7c3bed]/20 text-sm font-medium animate-scale-in">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7c3bed] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7c3bed]" />
             </span>
-            November 29, 2025 • The Zone Tech Park, Lagos
+            November 29, 2025 • Miva Open University, Lagos
           </div>
 
           {/* Headline */}
@@ -49,7 +49,7 @@ const Hero = () => {
           </h1>
 
           {/* Subtext */}
-          <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl  max-w-3xl mx-auto leading-relaxed">
             Where ambition meets opportunity Career Brunch 2.0 is the ultimate experience for Gen Zs and 
             Millennials looking to connect, learn, and grow. Join us for a transformative day of career 
             acceleration, tech innovation, and lifestyle experiences.
@@ -57,17 +57,20 @@ const Hero = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className="flex items-center gap-2">
+              <a href="https://selar.com/careerbrunch2025">
+            <button className="flex cursor-pointer bg-primary px-4 py-2 items-center gap-2">
+
               <LuTickets className="w-5 h-5" />
               Get Tickets
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
-            <button className="flex items-center gap-2">
+              </a>
+            <button className="flex cursor-pointer bg-sec px-4 py-2 items-center gap-2">
               <Handshake className="w-5 h-5" />
               Partner with Us
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
-            <button >
+            <button className="bg-black cursor-pointer px-4 py-2">
               Learn More
             </button>
           </div>

@@ -1,5 +1,5 @@
 import { Mic2 } from 'lucide-react';
-import Brand from './Brand';
+// import Brand from './Brand';
 
 export default function Speakers() {
   
@@ -22,12 +22,6 @@ export default function Speakers() {
       title: "HR Leader",
       image: "../../Images/s3.jpeg"
     },
-    // {
-    //   name: "Babajide Duroshola",
-    //   nickname: "",
-    //   title: "Business Strategist",
-    //   image: "https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg?auto=compress&cs=tinysrgb&w=300"
-    // },
     {
       name: "Peace Itimi",
       nickname: "",
@@ -40,43 +34,15 @@ export default function Speakers() {
     <section id="speakers" className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50">
       <div className="max-w-7xl mx-auto px-4 ">
         <div className="">
-          <div className="text-center mb-16">
+          <div className="text-center">
             <div className="inline-flex items-center gap-2 mb-6 px-4  py-3 bg-white rounded border border-gray-300">
               <Mic2 className="w-5 h-5 text-orange-600" />
               <span className="text-sm font-semibold text-gray-900 tracking-wide">SPEAKERS & GUESTS</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-2">
-              Learn from Industry Leaders
-            </h2>
-            <p className="text-base md:text-lg text-gray-600">
-              Connect with visionaries shaping Africa's tech and career landscape
-            </p>
+            
           </div>
 
-          <Brand />
-
-          {/* <div className="mb-16">
-            <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-10 text-center">
-              Featuring Voices From:
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-              {companies.map((company, index) => (
-                <div
-                  key={index}
-                  className="group relative aspect-square bg-white rounded hover:shadow transition-all duration-300 hover:-translate-y-2 overflow-hidden border-2 border-gray-100 hover:border-orange-300"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                    <div className="w-12 h-12 mb-3 bg-gradient-to-br from-orange-100 to-rose-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Building2 className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <span className="text-sm font-bold text-gray-900 text-center">{company.name}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-          </div> */}
+        
 
           <div className="relative">
             <div className="text-center mb-12">

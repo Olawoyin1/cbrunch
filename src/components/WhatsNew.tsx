@@ -47,7 +47,7 @@ const WhatsNew = () => {
             <div
               key={idx}
               // className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]}`}
-              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-primary/5 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]} w-full md:w-auto`}
+              className={`group relative  overflow-hidden rounded-3xl bg-gradient-to-br from-card to-[#FF7888]/40 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow ${rotations[idx % rotations.length]} w-full md:w-auto`}
 
               // style={{
               //   top: `${(idx % 3) * -10}px`,
