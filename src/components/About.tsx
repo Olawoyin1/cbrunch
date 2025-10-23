@@ -160,6 +160,9 @@ const images = [
   "../../Images/g1.jpg",
   "../../Images/g2.jpg",
   "../../Images/g3.jpg",
+  "../../Images/g4.jpg",
+  "../../Images/g5.jpg",
+  "../../Images/g6.jpg",
 ];
 
 const About = () => {
