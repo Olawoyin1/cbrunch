@@ -5,15 +5,15 @@ export default function Speakers() {
   
   const speakers = [
     {
-      name: "Jola Ayeye",
+      name: "Adeife Adeoye",
       nickname: "",
-      title: "Tech Entrepreneur",
+      title: "Digital Creator",
       image: "../../Images/s1.jpeg"
     },
     {
-      name: "Tayo Oviosu",
+      name: "Ayobami Oyaleke",
       nickname: "",
-      title: "Fintech Pioneer",
+      title: "CEO Mainstack",
       image: "../../Images/s2.jpeg"
     },
     {
@@ -23,9 +23,9 @@ export default function Speakers() {
       image: "../../Images/s3.jpeg"
     },
     {
-      name: "Peace Itimi",
+      name: "Adeola Adedewe",
       nickname: "",
-      title: "Career Coach",
+      title: "CEO Kredete",
       image: "../../Images/s4.jpeg"
     }
   ];
