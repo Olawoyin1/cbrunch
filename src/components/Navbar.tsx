@@ -50,19 +50,19 @@ const Navbar = () => {
             <img
               src={
                 isScrolled
-                  ? "../../Images/logo4.png" 
-                  : "../../Images/logo-white.png" 
+                  ? "../../Images/cb.png" 
+                  : "../../Images/cb.png" 
               }
               alt="Career Brunch Logo"
               className="w-28 md:w-36 object-contain transition-all duration-300"
             />
-            <span
+            {/* <span
               className={`text-xs md:text-sm absolute bottom-0 right-0.5 md:right-1.7 transition-colors duration-300 ${
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
               Career Brunch 2.0
-            </span>
+            </span> */}
           </button>
 
           {/* Desktop Navigation */}

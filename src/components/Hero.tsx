@@ -50,7 +50,7 @@ const Hero = () => {
 
           {/* Subtext */}
           <p className="text-base md:text-xl  max-w-3xl mx-auto leading-relaxed">
-            Where ambition meets opportunity Career Brunch 2.0 is the ultimate experience for Gen Zs and 
+            Where ambition meets opportunity, Career Brunch 2.0 is the ultimate Career, Tech and Lifestyle Experience for Gen Zs and 
             Millennials looking to connect, learn, and grow. Join us for a transformative day of career 
             acceleration, tech innovation, and lifestyle experiences.
           </p>
