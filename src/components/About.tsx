@@ -204,9 +204,9 @@ const About = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white/70 border border-border/50 rounded-xl p-6 shadow backdrop-blur-sm">
+            <div className="absolute -bottom-6  bg-gradient-to-br from-card to-[#FF7888]/40 -right-6 bg-white/70 border border-border/50 rounded-xl p-6 shadow backdrop-blur-sm">
               <div className="text-center">
-                <div className="text-3xl font-bold">2.0</div>
+                <div className="text-3xl font-bold ">2.0</div>
                 <div className="text-sm text-muted-foreground">Edition</div>
               </div>
             </div>
