@@ -47,7 +47,7 @@ export default function Speakers() {
           <div className="relative">
             <div className="text-center mb-12">
               <h3 className="text-2xl sm:text-5xl font-bold mb-2 text-gray-900">
-                Meet Your <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">Expected Guests</span>
+                Meet The <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">Speakers</span>
               </h3>
               <p className="text-sm md:text-xl text-gray-600 max-w-2xl mx-auto">
                 Get ready to learn from pioneers, innovators, and thought leaders shaping the future of work
