@@ -37,7 +37,7 @@ export default function Footer() {
 
           <div className="flex justify-center gap-6 mb-12">
             <a
-              href="#"
+              href="https://www.instagram.com/thegenzhr/"
               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
               <TfiInstagram className="w-5 h-5" />
