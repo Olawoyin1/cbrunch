@@ -75,7 +75,7 @@ export default function Audience() {
               </div>
             ))}
 
-            <div className="group relative bg-gradient-to-br   group  rounded-xl  from-rose-300 to-card shadow p-5  hover:scale-105 hover:shadow-glow   hover:shadow transition-all duration-300 overflow-hidden">
+            <div className="group relative bg-gradient-to-br   group  rounded-xl  from-[#00FFBD] to-card shadow p-5  hover:scale-105 hover:shadow-glow   hover:shadow transition-all duration-300 overflow-hidden">
               <div className="relative p-6 flex flex-col items-center justify-center text-center h-full ">
                 <ArrowRight className="w-10 h-10 mb-3 group-hover:translate-x-2 transition-transform duration-300" />
                 <p className="font-bold text-lg">And many more!</p>

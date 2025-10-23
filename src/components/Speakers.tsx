@@ -16,12 +16,12 @@ export default function Speakers() {
       title: "CEO Mainstack",
       image: "../../Images/s2.jpeg"
     },
-    {
-      name: "Tosin Olaseinde",
-      nickname: "",
-      title: "HR Leader",
-      image: "../../Images/s3.jpeg"
-    },
+    // {
+    //   name: "Tosin Olaseinde",
+    //   nickname: "",
+    //   title: "HR Leader",
+    //   image: "../../Images/s3.jpeg"
+    // },
     {
       name: "Adeola Adedewe",
       nickname: "",
@@ -54,7 +54,7 @@ export default function Speakers() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 max-w-4xl mx-auto md:grid-cols-3 gap-5">
               {speakers.map((speaker, index) => (
                 <div
                   key={index}
