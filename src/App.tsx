@@ -25,10 +25,10 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Speakers />
       <Theme />
       <WhatsNew />
       <Gallery />
-      <Speakers />
       <Features />
       <Audience />
       <FAQ />

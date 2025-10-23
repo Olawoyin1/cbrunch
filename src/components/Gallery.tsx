@@ -71,9 +71,14 @@ export default function Gallery() {
             <p className="text-base md:text-xl text-gray-300 mb-6">
               Ready to be part of Career Brunch 2.0?
             </p>
+            <a
+             href="https://selar.com/careerbrunch2025"
+             >
+
             <button className="px-10 py-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold rounded hover:shadow transition-all duration-300 hover:scale-105">
               Secure Your Spot Now
             </button>
+             </a>
           </div>
         </div>
       </div>
