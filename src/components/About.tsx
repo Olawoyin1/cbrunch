@@ -217,13 +217,15 @@ const About = () => {
             <p className="text-xl md:text-2xl font-semibold text-foreground">
               Building Careers. Creating Connections. Bridging Generations.
             </p>
-            <div className="space-y-4 text-sm md:text-lg leading-relaxed text-muted-foreground">
+            <div className="space-y-4 text-sm md:text-base leading-relaxed text-muted-foreground">
               {/* <p>
                 Career Brunch isn't just another networking event. It's a{" "}
                 <strong>career-tech and lifestyle movement</strong>.
               </p> */}
 
-              <p>We’re curating a one-of-a-kind experience where Gen Z and Millennial professionals will connect with industry leaders, founders, and innovators shaping the future of work across Africa. Through thought-provoking conversations, networking, exhibitions, and live sessions, Career Brunch blends career growth, lifestyle, and opportunity in one unforgettable day.
+              <p>We’re curating a one-of-a-kind experience where Gen Z and Millennial professionals will connect with industry leaders, founders, and innovators shaping the future of work across Africa. Through thought-provoking conversations, networking, exhibitions, and live sessions, Career Brunch blends career growth, lifestyle, and opportunity in one unforgettable day.</p>
+
+                <p>
 This year’s edition, themed around career growth, innovation, and lifestyle, will host over 300+ professionals, founders, and entrepreneurs for a day of impactful conversations, networking, and transformative learning experiences.</p>
 <p>This isn’t another sit-and-listen conference. It’s an immersive experience where ambition truly meets opportunity. Instead of just information, you’ll leave with something you can carry home: a mentor, a clearer career direction, or a genuine professional connection.</p>
               {/* <p>
