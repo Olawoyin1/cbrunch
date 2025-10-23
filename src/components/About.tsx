@@ -204,7 +204,7 @@ const About = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6  bg-gradient-to-br from-card to-[#FF7888]/40 -right-6 bg-white/70 border border-border/50 rounded-xl p-6 shadow backdrop-blur-sm">
+            <div className="absolute -bottom-6  bg-gradient-to-br from-card to-[#00FFBD]/40 -right-6 bg-white/70 border border-border/50 rounded-xl p-6 shadow backdrop-blur-sm">
               <div className="text-center">
                 <div className="text-3xl font-bold ">2.0</div>
                 <div className="text-sm text-muted-foreground">Edition</div>
@@ -251,7 +251,7 @@ This year’s edition, themed around career growth, innovation, and lifestyle, w
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-[#FF7888]/40  shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow"
+              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-[#00FFBD]/40  shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow"
             >
               <div className="w-14 h-14 bg-gradient-primary flex items-center justify-center mx-auto rounded-full mb-4 group-hover:shadow-glow transition-all duration-300">
                 <highlight.icon className="w-8 h-8" />
