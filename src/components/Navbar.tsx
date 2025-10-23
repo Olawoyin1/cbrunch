@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {Menu, X } from "lucide-react";
 import { LuTickets } from "react-icons/lu";
+import { openMainstackCheckout } from "../utils/mainstackCheckout";
 // import { Link } from "react-router-dom";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,12 +34,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ease-in-out ${
         isScrolled
           ? "bg-white text-black border-b border-gray-200 shadow-sm"
           : "bg-transparent text-white"
       }`}
+
+
+
     >
+
+
+
+      
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20 transition-all duration-300">
           {/* Logo */}
@@ -84,12 +92,14 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-             href="https://selar.com/careerbrunch2025"
-             >
 
-              {/* <Link></Link> */}
+           
+
+
+              
             <button
+              onClick={openMainstackCheckout}
+            // id="mainstack_checkout_btn"
               className={`flex cursor-pointer items-center gap-2 px-4 py-2 transition-all duration-300  ${
                 isScrolled
                 ? "bg-black text-white hover:bg-gray-800"
@@ -99,7 +109,6 @@ const Navbar = () => {
               <LuTickets className="w-4 h-4" />
               Get Tickets
             </button>
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -164,6 +173,7 @@ const Navbar = () => {
                 </motion.button>
               ))}
               <motion.button
+              onClick={openMainstackCheckout}
                 whileHover={{ scale: 1.05 }}
                 className={`flex items-center gap-2 w-full justify-center py-2.5 rounded-full transition-all duration-300 ${
                   isScrolled

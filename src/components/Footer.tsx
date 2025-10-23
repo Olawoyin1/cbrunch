@@ -15,10 +15,10 @@ export default function Footer() {
             // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-xl relative md:text-2xl font-bold"
           >
-            <img src="../../Images/logo4.png" alt="" className="w-35" />
-            <span className="text-sm absolute bottom-0 right-1.5">
+            <img src="../../Images/cb.png" alt="" className="w-35" />
+            {/* <span className="text-sm absolute bottom-0 right-1.5">
               Career Brunch 2.0
-            </span>
+            </span> */}
 
           </button>
             </div>
