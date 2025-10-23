@@ -65,14 +65,17 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
               </a>
+              <a href="https://forms.gle/SPsMCsaDnHkUso446">
+
             <button className="flex cursor-pointer bg-sec px-4 py-2 items-center gap-2">
               <Handshake className="w-5 h-5" />
               Partner with Us
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
-            <button className="bg-black cursor-pointer px-4 py-2">
+              </a>
+            {/* <button className="bg-black cursor-pointer px-4 py-2">
               Learn More
-            </button>
+            </button> */}
           </div>
 
 
