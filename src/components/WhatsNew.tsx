@@ -1,5 +1,5 @@
 
-import { Sparkles, Brain, TrendingUp, Lightbulb} from "lucide-react";
+import { Sparkles, Brain, Lightbulb} from "lucide-react";
 import { LiaComment } from "react-icons/lia";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { BsCamera } from "react-icons/bs";
@@ -10,7 +10,7 @@ const features = [
   { icon: HiOutlineSparkles, title: "Lifestyle Lounge", description: "Wellness, fashion, finance, and career therapy - all in one space" },
   { icon: LiaComment, title: "AI-Powered CV Reviews", description: "Mock interviews and speed networking powered by cutting-edge technology" },
   { icon: BsCamera, title: "LinkedIn Photo Booth", description: "Get professional headshots that make your profile stand out" },
-  { icon: TrendingUp, title: "Career Brunch Pitch", description: "The first-ever pitch competition spotlighting innovators breaking into tech" },
+  // { icon: TrendingUp, title: "Career Brunch Pitch", description: "The first-ever pitch competition spotlighting innovators breaking into tech" },
   { icon: Lightbulb, title: "Hands-on Masterclasses", description: "Learn practical skills from industry experts in real-time" },
 ];
 
