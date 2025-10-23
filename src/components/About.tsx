@@ -218,11 +218,14 @@ const About = () => {
               Building Careers. Creating Connections. Bridging Generations.
             </p>
             <div className="space-y-4 text-sm md:text-lg leading-relaxed text-muted-foreground">
-              <p>
+              {/* <p>
                 Career Brunch isn't just another networking event. It's a{" "}
                 <strong>career-tech and lifestyle movement</strong>.
-              </p>
-              <p>
+              </p> */}
+
+              <p>We’re curating a one-of-a-kind experience where 300+ Gen Z and Millennial professionals will connect with industry leaders, founders, and innovators shaping the future of work across Africa. Through thought-provoking conversations, networking, exhibitions, and live sessions, Career Brunch blends career growth, lifestyle, and opportunity in one unforgettable day.
+This year’s edition, themed around career growth, innovation, and lifestyle, will host over 300+ professionals, founders, and entrepreneurs for a day of impactful conversations, networking, and transformative learning experiences.</p>
+              {/* <p>
                 Born out of GenZ HR's mission to shape the future of work in
                 Africa, Career Brunch connects young professionals, founders,
                 and industry leaders through immersive experiences that go
@@ -232,7 +235,7 @@ const About = () => {
                 At its core, Career Brunch empowers attendees to gain{" "}
                 <strong>clarity, confidence, and community</strong> as they
                 navigate the fast-changing world of work.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
