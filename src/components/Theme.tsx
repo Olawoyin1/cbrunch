@@ -7,8 +7,11 @@ export default function Theme() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#00FFBD] rounded-full filter "></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00FFBD] rounded-full filter "></div>
+        <div className="absolute hidden md:block  top-20 left-10 w-72 h-72 bg-[#00FFBD] rotate-45 rounded-md filter  "></div>
+        <div className="absolute  block md:hidden top-1/2  rotate-90 rounded-md filter  ">
+          <img src="../../Images/cb.png" alt="" />
+        </div>
+        <div className="absolute bottom-20 hidden md:block right-10 w-96 h-96 bg-[#00FFBD] rounded-full filter "></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
