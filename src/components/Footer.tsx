@@ -1,4 +1,8 @@
-import {  Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+// import {   Linkedin, Mail } from 'lucide-react';
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FaXTwitter } from 'react-icons/fa6';
+import { TfiInstagram } from "react-icons/tfi";
+import { PiTiktokLogo } from "react-icons/pi";
 
 export default function Footer() {
   return (
@@ -36,25 +40,25 @@ export default function Footer() {
               href="#"
               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Twitter className="w-5 h-5" />
+              <TfiInstagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://x.com/thegenzhr"
               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Instagram className="w-5 h-5" />
+              <FaXTwitter  className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/thegenzhr1"
               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Linkedin className="w-5 h-5" />
+              <SlSocialLinkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:partnerships@thegenzhr.com"
+              href="https://www.tiktok.com/@thegenzhr_"
               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Mail className="w-5 h-5" />
+              <PiTiktokLogo className="w-5 h-5" />
             </a>
           </div>
 

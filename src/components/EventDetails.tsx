@@ -116,10 +116,12 @@ const EventDetails = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="https://thegenzhr.substack.com/">
                 <button className="group flex items-center  shadow rounded-xl gap-3 text-lg px-10 py-3 bg-primary shadow-glow hover:scale-105 transition-transform">
                   Join Our Newsletter
                   <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
                 </button>
+                </a>
               </div>
             </div>
           </div>
