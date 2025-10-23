@@ -98,7 +98,7 @@ export default function FAQ() {
               We're here to help! Reach out to our team and we'll get back to you promptly.
             </p>
             <a
-              href="mailto:genzhr@gmail.com"
+              href="mailto:thegenzhr@gmail.com,partnerships@thegenzhr.com"
               className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-semibold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Contact Us
