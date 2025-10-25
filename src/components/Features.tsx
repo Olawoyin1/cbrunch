@@ -4,6 +4,7 @@ import { LuBriefcaseBusiness } from "react-icons/lu";
 import { BsCamera } from "react-icons/bs";
 import { PiGameController } from "react-icons/pi";
 import { VscCoffee } from "react-icons/vsc";
+import { motion } from "framer-motion";
 import { GrUserExpert } from "react-icons/gr";
 import { BiBuilding } from "react-icons/bi";
 
@@ -83,8 +84,14 @@ export default function Features() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-8">
             {featuredItems.map((feature, index) => (
-              <div
-                key={index}
+             <motion.div
+              key={feature.title}
+              // className="service-card"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+                // key={index}
                 className="group relative bg-white border border-gray-200 rounded overflow-hidden  hover:shadow transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="relative h-56 overflow-hidden">
@@ -106,7 +113,7 @@ export default function Features() {
                     {feature.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -115,3 +122,5 @@ export default function Features() {
     </section>
   );
 }
+
+

@@ -4,6 +4,7 @@ import { RiFlashlightLine } from "react-icons/ri";
 import { FaUsersRays } from "react-icons/fa6";
 import { GrUserManager } from "react-icons/gr";
 import { BsAward } from "react-icons/bs";
+import { useId } from "react";
 
 export default function Audience() {
   const audiences = [
@@ -62,6 +63,7 @@ export default function Audience() {
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-card to-primary/5 shadow p-1 transition-transform duration-500  hover:shadow-glow "
               >
+                <Grid size={20} />
                 <div className={`absolute inset-0 bg-gradient-to-br  transition-opacity duration-300`}></div>
                 <div className="relative p-4 md:p-6 flex md:flex-col gap-4 items-center md:text-center">
                   <div className="w-14 h-14 bg-gradient-to-br from-orange-50 to-card backdrop-blur-md rounded-md flex items-center justify-center">
@@ -130,3 +132,82 @@ export default function Audience() {
     </section>
   );
 }
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* ✅ GRID EFFECT COMPONENTS (copied and integrated cleanly) */
+/* -------------------------------------------------------------------------- */
+export const Grid = ({
+  pattern,
+  size,
+}: {
+  pattern?: number[][];
+  size?: number;
+}) => {
+  const p =
+    pattern ??
+    Array.from({ length: 5 }, () => [
+      Math.floor(Math.random() * 4) + 7,
+      Math.floor(Math.random() * 6) + 1,
+    ]);
+
+  return (
+    <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)] z-0">
+      <div className="absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
+        <GridPattern
+          width={size ?? 20}
+          height={size ?? 20}
+          x="-12"
+          y="4"
+          squares={p}
+          className="absolute inset-0 h-full w-full mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
+        />
+      </div>
+    </div>
+  );
+};
+
+export function GridPattern({ width, height, x, y, squares, ...props }: any) {
+  const patternId = useId();
+
+  return (
+    <svg aria-hidden="true" {...props}>
+      <defs>
+        <pattern
+          id={patternId}
+          width={width}
+          height={height}
+          patternUnits="userSpaceOnUse"
+          x={x}
+          y={y}
+        >
+          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
+        </pattern>
+      </defs>
+      <rect
+        width="100%"
+        height="100%"
+        strokeWidth={0}
+        fill={`url(#${patternId})`}
+      />
+      {squares && (
+        <svg x={x} y={y} className="overflow-visible">
+          {squares.map(([sx, sy]: any) => (
+            <rect
+              key={`${sx}-${sy}`}
+              strokeWidth="0"
+              width={width + 1}
+              height={height + 1}
+              x={sx * width}
+              y={sy * height}
+            />
+          ))}
+        </svg>
+      )}
+    </svg>
+  );
+}
+

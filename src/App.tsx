@@ -16,7 +16,6 @@ import EventDetails from "./components/EventDetails";
 import { useEffect } from "react";
 import "./App.css";
 import WhatsAppChat from './components/WhatsAppChat';
-// ... imports
 
 function App() {
   useEffect(() => {

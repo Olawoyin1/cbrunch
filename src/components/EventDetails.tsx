@@ -1,5 +1,6 @@
 
 import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
+import { BackgroundRippleEffect } from "./ui/background-ripple-effect";
 
 const EventDetails = () => {
   const details = [
@@ -27,7 +28,8 @@ const EventDetails = () => {
   ];
 
   return (
-    <section id="details" className="py-20 md:py-32 relative overflow-hidden">
+    <section id="details" className="py-20 relative overflow-hidden">
+      <BackgroundRippleEffect />
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-orange-50/5 to-card" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(168,85,247,0.15),transparent_60%)]" />
