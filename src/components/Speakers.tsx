@@ -159,7 +159,7 @@ export default function Speakers() {
               variants={cardVariants}
               whileHover={{ scale: 1.05, rotateX: 2, rotateY: -2 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
-              className="relative w-full max-w-[320px] h-[380px] rounded-2xl overflow-hidden cursor-pointer 
+              className="relative w-full max-w-[320px] h-[380px] mx-auto rounded-2xl overflow-hidden cursor-pointer 
                          bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a] border border-gray-800
                          hover:shadow-[0_0_40px_rgba(255,102,0,0.25)] transition-all duration-700 group"
             >
