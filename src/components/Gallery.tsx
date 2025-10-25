@@ -72,7 +72,7 @@ export default function Gallery() {
               Ready to be part of Career Brunch 2.0?
             </p>
             <a
-             href="https://selar.com/careerbrunch2025"
+             href="https://mainstack.store/thegenzhr/career-brunch"
              >
 
             <button className="px-10 py-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold rounded hover:shadow transition-all duration-300 hover:scale-105">
