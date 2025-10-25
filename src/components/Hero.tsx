@@ -63,7 +63,7 @@ const Hero = () => {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             
-              <button onClick={openMainstackCheckout} className="flex cursor-pointer bg-primary px-4 py-2 items-center gap-2">
+              <button onClick={openMainstackCheckout} className="flex rounded cursor-pointer bg-primary px-4 py-2 items-center gap-2">
                 <LuTickets className="w-5 h-5" />
                 Get Tickets
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -73,7 +73,7 @@ const Hero = () => {
 
             
             <a href="https://forms.gle/SPsMCsaDnHkUso446">
-              <button className="flex cursor-pointer bg-sec px-4 py-2 items-center gap-2">
+              <button className="flex cursor-pointer bg-sec px-4 py-2 rounded items-center gap-2">
                 <Handshake className="w-5 h-5" />
                 Partner with Us
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

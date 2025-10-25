@@ -1,7 +1,3 @@
-// // App.tsx
-// // import { BrowserRouter } from "react-router-dom";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 import './App.css'
 import Navbar from "./components/Navbar";
@@ -16,33 +12,10 @@ import Features from "./components/Features";
 import Audience from "./components/Audience";
 import Speakers from "./components/Speakers";
 import EventDetails from "./components/EventDetails";
-// function App() {
 
-
-//   return (
-//     <div className="min-h-screen">
-      // <Navbar />
-      // <Hero />
-      // <About />
-      // <Speakers />
-      // <Theme />
-      // <WhatsNew />
-      // <Gallery />
-      // <Features />
-      // <Audience />
-      // <FAQ />
-      // <EventDetails />
-      // <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-// App.tsx (relevant parts only)
 import { useEffect } from "react";
 import "./App.css";
+import WhatsAppChat from './components/WhatsAppChat';
 // ... imports
 
 function App() {
@@ -73,6 +46,7 @@ function App() {
       <FAQ />
       <EventDetails />
       <Footer />
+      <WhatsAppChat />
 
       {/* 1) Hidden "official" Mainstack button (script expects this id) */}
       <button

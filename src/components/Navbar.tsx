@@ -59,7 +59,7 @@ const Navbar = () => {
               src={
                 isScrolled
                   ? "../../Images/cb.png" 
-                  : "../../Images/cb.png" 
+                  : "../../Images/cb-white.png" 
               }
               alt="Career Brunch Logo"
               className="w-28 md:w-36 object-contain transition-all duration-300"
@@ -100,7 +100,7 @@ const Navbar = () => {
             <button
               onClick={openMainstackCheckout}
             // id="mainstack_checkout_btn"
-              className={`flex cursor-pointer items-center gap-2 px-4 py-2 transition-all duration-300  ${
+              className={`flex cursor-pointer items-center rounded gap-2 px-4 py-2 transition-all duration-300  ${
                 isScrolled
                 ? "bg-black text-white hover:bg-gray-800"
                 : "bg-primary text-white hover:opacity-90"
