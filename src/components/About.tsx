@@ -1,5 +1,6 @@
 import { useEffect, useState, useId } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence , easeOut} from "framer-motion";
+import type { Variants } from "framer-motion";
 import { CgCommunity } from "react-icons/cg";
 import { PiTarget } from "react-icons/pi";
 import { RiSparkling2Line } from "react-icons/ri";
@@ -34,6 +35,30 @@ const images = [
 ];
 
 const About = () => {
+
+
+  const container: Variants = {
+  hidden: { opacity: 1 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut },
+  },
+};
+
+
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -86,10 +111,7 @@ const About = () => {
               Building Careers. Creating Connections. Bridging Generations.
             </p>
             <div className="space-y-4 text-sm md:text-base leading-relaxed text-muted-foreground">
-              {/* <p>
-                Career Brunch isn't just another networking event. It's a{" "}
-                <strong>career-tech and lifestyle movement</strong>.
-              </p> */}
+            
 
               <p>
                 We’re curating a one-of-a-kind experience where Gen Z and
@@ -118,26 +140,31 @@ const About = () => {
         </div>
 
         {/* Highlights */}
-        <div className="grid text-center md:grid-cols-3 gap-6 mb-16">
-          {highlights.map((highlight, index) => (
-            <motion.div
-              key={highlight.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-[#00FFBD]/40  shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow"
-            >
-               <Grid size={20} />
-              <div className="w-14 h-14 bg-gradient-primary flex items-center justify-center mx-auto rounded-full mb-4 group-hover:shadow-glow transition-all duration-300">
-                <highlight.icon className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
-              <p className="text-sm md:text-base leading-relaxed">
-                {highlight.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+  className="grid text-center md:grid-cols-3 gap-6 "
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+>
+  {highlights.map((highlight) => (
+    <motion.div
+      key={highlight.title}
+      variants={item}
+      className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-[#00FFBD]/40 shadow p-5 transition-transform duration-500 hover:scale-105 hover:shadow-glow"
+    >
+      <Grid size={20} />
+      <div className="w-14 h-14 bg-gradient-primary flex items-center justify-center mx-auto rounded-full mb-4 group-hover:shadow-glow transition-all duration-300">
+        <highlight.icon className="w-8 h-8" />
+      </div>
+      <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
+      <p className="text-sm md:text-base leading-relaxed">
+        {highlight.description}
+      </p>
+    </motion.div>
+  ))}
+</motion.div>
+
       </div>
     </section>
   );
