@@ -35,7 +35,7 @@ const WhatsAppChat = () => {
     };
   }, []);
 
-  const phoneNumber = "2348168028145"; // your WhatsApp number (no "+" or spaces)
+  const phoneNumber = "2348100818921"; // your WhatsApp number (no "+" or spaces)
   const message = encodeURIComponent("Hi 👋 I'm interested in the upcoming event! Can you share more details?");
 
   return (
