@@ -191,14 +191,14 @@ export default function Audience() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded overflow-hidden shadow"
+          className="relative bg-gradient-to-br rounded-2xl from-gray-900 via-gray-800 to-gray-900  overflow-hidden shadow"
         >
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full filter blur-3xl"></div>
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-500 rounded-full filter blur-3xl"></div>
           </div>
 
-          <div className="relative p-4 py-10 lg:p-10">
+          <div className="relative  p-4 py-10 lg:p-10">
             <motion.div variants={itemVariants} className="text-center mb-12">
               <h3 className="text-2xl sm:text-5xl font-bold text-white mb-4">
                 Why Attend Career Brunch 2.0?
@@ -221,7 +221,7 @@ export default function Audience() {
                     className="text-center group"
                   >
                     <div
-                      className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${benefit.gradient} rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-20 h-20 mx-auto mb-6  bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
                     >
                       <Icon className="w-10 h-10 text-white" />
                     </div>
@@ -232,7 +232,7 @@ export default function Audience() {
                       {benefit.description}
                     </p>
                   </motion.div>
-                );
+                );  
               })}
             </motion.div>
 
