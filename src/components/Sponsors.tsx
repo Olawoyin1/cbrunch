@@ -1,8 +1,5 @@
-
-
-// import React from "react";
-// import {  useAnimationFrame } from "framer-motion";
-// import { useRef } from "react";
+// import React, { useRef } from "react";
+// import { useAnimationFrame } from "framer-motion";
 
 // interface Voice {
 //   id: string;
@@ -23,11 +20,10 @@
 // const InfiniteCarousel = () => {
 //   const baseVelocity = -50; // negative = left scroll
 //   const x = useRef(0);
-//   const containerRef = useRef<HTMLDivElement>(null);
 //   const innerRef = useRef<HTMLDivElement>(null);
 
 //   // continuous animation frame loop
-//   useAnimationFrame((t, delta) => {
+//   useAnimationFrame(( delta) => {
 //     if (!innerRef.current) return;
 //     x.current += (baseVelocity * delta) / 1000;
 //     if (Math.abs(x.current) >= innerRef.current.scrollWidth / 2) {
@@ -38,7 +34,7 @@
 //   });
 
 //   return (
-//     <div ref={containerRef} className="relative w-full overflow-hidden">
+//     <div className="relative w-full overflow-hidden">
 //       <div ref={innerRef} className="flex items-center gap-8">
 //         {[...voices, ...voices].map((acc, i) => (
 //           <div
@@ -48,7 +44,7 @@
 //             <img
 //               src={acc.logoSrc}
 //               alt={acc.altText || acc.name}
-//               className="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+//               className="max-h-16 w-auto object-contain md:grayscale hover:grayscale-0 transition duration-300"
 //               title={acc.name}
 //             />
 //           </div>
@@ -60,7 +56,7 @@
 
 // const Sponsors: React.FC = () => {
 //   return (
-//     <section className="bg-gray-400 dark:bg-neutral-900 py-6  backdrop-blur-sm filter overflow-hidden">
+//     <section className="dark:bg-neutral-900 py-6 backdrop-blur-sm filter overflow-hidden">
 //       <div className="max-w-7xl mx-auto md:px-0 text-center">
 //         {/* Large Screens */}
 //         <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
@@ -111,18 +107,25 @@ const voices: Voice[] = [
 ];
 
 const InfiniteCarousel = () => {
-  const baseVelocity = -50; // negative = left scroll
+  const baseVelocity = -20; // smaller number = slower
   const x = useRef(0);
   const innerRef = useRef<HTMLDivElement>(null);
 
-  // continuous animation frame loop
-  useAnimationFrame(( delta) => {
+  useAnimationFrame((t, delta) => {
     if (!innerRef.current) return;
-    x.current += (baseVelocity * delta) / 1000;
-    if (Math.abs(x.current) >= innerRef.current.scrollWidth / 2) {
-      // reset to avoid visible snap
+
+    // Convert delta to seconds for consistent speed across frame rates
+    const deltaInSeconds = delta / 1000;
+
+    // Move based on velocity
+    x.current += baseVelocity * deltaInSeconds;
+
+    // Reset when halfway scrolled
+    const totalWidth = innerRef.current.scrollWidth / 2;
+    if (Math.abs(x.current) >= totalWidth) {
       x.current = 0;
     }
+
     innerRef.current.style.transform = `translateX(${x.current}px)`;
   });
 
