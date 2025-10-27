@@ -87,6 +87,7 @@
 // export default Sponsors;
 
 
+// src/components/Sponsors.tsx
 import React, { useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
 
@@ -106,23 +107,19 @@ const voices: Voice[] = [
   { id: "mandc", name: "Mandc", logoSrc: "../../Images/mtn.png", altText: "Mandc Logo" },
 ];
 
-const InfiniteCarousel = () => {
-  const baseVelocity = -20; // smaller number = slower
+const InfiniteCarousel: React.FC = () => {
+  const baseVelocity = -15; // adjust for desired scroll speed
   const x = useRef(0);
   const innerRef = useRef<HTMLDivElement>(null);
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     if (!innerRef.current) return;
 
-    // Convert delta to seconds for consistent speed across frame rates
-    const deltaInSeconds = delta / 1000;
+    // Move continuously
+    x.current += (baseVelocity * delta) / 1000;
 
-    // Move based on velocity
-    x.current += baseVelocity * deltaInSeconds;
-
-    // Reset when halfway scrolled
-    const totalWidth = innerRef.current.scrollWidth / 2;
-    if (Math.abs(x.current) >= totalWidth) {
+    // Reset position to create a seamless infinite loop
+    if (Math.abs(x.current) >= innerRef.current.scrollWidth / 2) {
       x.current = 0;
     }
 
@@ -140,7 +137,7 @@ const InfiniteCarousel = () => {
             <img
               src={acc.logoSrc}
               alt={acc.altText || acc.name}
-              className="max-h-16 w-auto object-contain md:grayscale hover:grayscale-0 transition duration-300"
+              className="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
               title={acc.name}
             />
           </div>
@@ -152,9 +149,11 @@ const InfiniteCarousel = () => {
 
 const Sponsors: React.FC = () => {
   return (
-    <section className="dark:bg-neutral-900 py-6 backdrop-blur-sm filter overflow-hidden">
-      <div className="max-w-7xl mx-auto md:px-0 text-center">
-        {/* Large Screens */}
+    <section className="dark:bg-neutral-900 py-3 backdrop-blur-sm filter overflow-hidden">
+      <div className="max-w-7xl mx-auto px-1 md:px-0 text-center">
+        
+
+        {/* Desktop & Tablet */}
         <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
           {voices.map((acc) => (
             <div
@@ -164,14 +163,14 @@ const Sponsors: React.FC = () => {
               <img
                 src={acc.logoSrc}
                 alt={acc.altText || acc.name}
-                className="max-h-20 w-auto object-contain md:grayscale hover:grayscale-0 transition duration-300"
+                className="max-h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
                 title={acc.name}
               />
             </div>
           ))}
         </div>
 
-        {/* Small Screens */}
+        {/* Mobile Infinite Scroll */}
         <div className="block sm:hidden">
           <InfiniteCarousel />
         </div>
