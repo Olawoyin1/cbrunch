@@ -16,6 +16,7 @@ import EventDetails from "./components/EventDetails";
 import { useEffect } from "react";
 import "./App.css";
 import WhatsAppChat from './components/WhatsAppChat';
+import Sponsors from './components/Sponsors';
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <Sponsors />
       <About />
       <Speakers />
       <Theme />

@@ -69,7 +69,7 @@ const item: Variants = {
   }, []);
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="pb-16 pt-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-5xl font-bold">
