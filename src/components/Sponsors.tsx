@@ -116,7 +116,7 @@ const InfiniteCarousel = () => {
   const innerRef = useRef<HTMLDivElement>(null);
 
   // continuous animation frame loop
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame(( delta) => {
     if (!innerRef.current) return;
     x.current += (baseVelocity * delta) / 1000;
     if (Math.abs(x.current) >= innerRef.current.scrollWidth / 2) {
