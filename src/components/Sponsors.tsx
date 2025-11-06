@@ -13,7 +13,7 @@ interface Voice {
 
 const voices: Voice[] = [
   { id: "mtn", name: "Mtn", logoSrc: "../../Images/sponsor1.png", altText: "Mtn Logo" },
-  { id: "spotify", name: "Spotify", logoSrc: "../../Images/compass.png", altText: "Spotify Logo" },
+  // { id: "spotify", name: "Spotify", logoSrc: "../../Images/compass.png", altText: "Spotify Logo" },
   { id: "piggyvest", name: "Piggyvest", logoSrc: "../../Images/yolat.png", altText: "Piggyvest Logo" },
   { id: "paid", name: "Paid", logoSrc: "../../Images/compas.png", altText: "Paid Logo" },
   { id: "krede", name: "Krede", logoSrc: "../../Images/mytherapist.png", altText: "Krede Logo" },
@@ -41,7 +41,7 @@ const InfiniteCarousel: React.FC = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div ref={innerRef} className="flex items-center gap-8">
+      <div ref={innerRef} className="flex items-center  gap-8">
         {[...voices, ...voices].map((acc, i) => (
           <div
             key={acc.id + i}
@@ -67,7 +67,7 @@ const Sponsors: React.FC = () => {
         
 
         {/* Desktop & Tablet */}
-        <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
+        <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
           {voices.map((acc) => (
             <div
               key={acc.id}

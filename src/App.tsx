@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import "./App.css";
 import WhatsAppChat from './components/WhatsAppChat';
 import Sponsors from './components/Sponsors';
+import Countdown from './components/Countdown';
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
+      {/* <Countdown /> */}
       <Hero />
       <Sponsors />
       <About />
