@@ -17,7 +17,7 @@ import { useEffect } from "react";
 import "./App.css";
 import WhatsAppChat from './components/WhatsAppChat';
 import Sponsors from './components/Sponsors';
-import Countdown from './components/Countdown';
+// import Countdown from './components/Countdown';
 
 function App() {
   useEffect(() => {

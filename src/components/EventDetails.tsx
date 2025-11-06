@@ -298,10 +298,10 @@ const EventDetails = () => {
                   <div className="w-3 h-3 rounded-full bg-primary animate-pulse shadow-glow" />
                   <span className="font-medium">Limited Spots</span>
                 </div>
-                <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-card/50 backdrop-blur-sm border border-accent/20">
+                {/* <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-card/50 backdrop-blur-sm border border-accent/20">
                   <div className="w-3 h-3 rounded-full bg-orange-600 animate-pulse shadow-glow" />
                   <span className="font-medium">Early Bird Available</span>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
