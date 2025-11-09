@@ -112,8 +112,14 @@ export default function Speakers() {
     {
       name: "Ebuka Emmanuel Arinze",
       nickname: "",
-      title: "CEO Kredete",
+      title: "Chief Product Officer",
       image: "../../Images/ebuka.jpg",
+    },
+    {
+      name: "Abbietayo",
+      nickname: "",
+      title: "content creator, storyteller, and writer",
+      image: "../../Images/new.jpg",
     },
   ];
 
@@ -138,7 +144,7 @@ export default function Speakers() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 max-w-4xl mx-auto md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 max-w-6xl mx-auto md:grid-cols-4 gap-5">
               {speakers.map((speaker, index) => (
                 <div key={index} className="group relative">
                   <div className="relative rounded overflow-hidden hover:shadow transition-all duration-500 hover:-translate-y-3">
