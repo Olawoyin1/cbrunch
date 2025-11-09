@@ -110,10 +110,10 @@ export default function Speakers() {
       image: "../../Images/s2.jpeg",
     },
     {
-      name: "Adeola Adedewe",
+      name: "Ebuka Emmanuel Arinze",
       nickname: "",
       title: "CEO Kredete",
-      image: "../../Images/s4.jpeg",
+      image: "../../Images/ebuka.jpg",
     },
   ];
 
