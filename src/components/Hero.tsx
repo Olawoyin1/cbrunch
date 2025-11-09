@@ -4,7 +4,6 @@ import { PointerHighlight } from "../components/ui/pointer-highlight";
 // import { openMainstackCheckout } from "../utils/mainstackCheckout";
 
 import { LuTickets } from "react-icons/lu";
-import { openMainstackCheckout } from "../utils/mainstackCheckout";
 
 
 const Hero = () => {
