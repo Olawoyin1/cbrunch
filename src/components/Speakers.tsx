@@ -147,6 +147,11 @@ export default function Speakers() {
       image: "../../Images/s2.jpeg",
     },
     {
+      name: "Bilta",
+      title: "Senior Manager, Career Advancement centre Miva Open University",
+      image: "../../Images/miva.jpeg",
+    },
+    {
       name: "Ebuka Emmanuel Arinze",
       title: "Chief Product Officer",
       image: "../../Images/ebuka.jpg",
@@ -155,6 +160,11 @@ export default function Speakers() {
       name: "Oyinkansola Badejo",
       title: "Financial Literacy Advocate",
       image: "../../Images/oyin.jpg",
+    },
+    {
+      name: "Ruby Ihekweme",
+      title: "Founder, Digitaley Drive",
+      image: "../../Images/ruby.jpg",
     },
   ];
 
