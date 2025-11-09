@@ -1,5 +1,3 @@
-
-
 // src/components/Sponsors.tsx
 import React, { useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
@@ -12,12 +10,55 @@ interface Voice {
 }
 
 const voices: Voice[] = [
-  { id: "mtn", name: "Mtn", logoSrc: "../../Images/sponsor1.png", altText: "Mtn Logo" },
+  {
+    id: "mtn",
+    name: "Mtn",
+    logoSrc: "../../Images/sponsor1.png",
+    altText: "Mtn Logo",
+  },
   // { id: "spotify", name: "Spotify", logoSrc: "../../Images/compass.png", altText: "Spotify Logo" },
-  { id: "piggyvest", name: "Piggyvest", logoSrc: "../../Images/yolat.png", altText: "Piggyvest Logo" },
-  { id: "paid", name: "Paid", logoSrc: "../../Images/compas.png", altText: "Paid Logo" },
-  { id: "krede", name: "Krede", logoSrc: "../../Images/mytherapist.png", altText: "Krede Logo" },
-  { id: "mandc", name: "Mandc", logoSrc: "../../Images/mtn.png", altText: "Mandc Logo" },
+  {
+    id: "piggyvest",
+    name: "Piggyvest",
+    logoSrc: "../../Images/yolat.png",
+    altText: "Piggyvest Logo",
+  },
+  {
+    id: "piggyvest",
+    name: "Piggyvest",
+    logoSrc: "../../Images/pt1.jpeg",
+    altText: "Piggyvest Logo",
+  },
+  {
+    id: "piggyvest",
+    name: "Piggyvest",
+    logoSrc: "../../Images/pt2.jpeg",
+    altText: "Piggyvest Logo",
+  },
+  {
+    id: "piggyvest",
+    name: "Piggyvest",
+    logoSrc: "../../Images/pt3.jpeg",
+    altText: "Piggyvest Logo",
+  },
+  {
+    id: "paid",
+    name: "Paid",
+    logoSrc: "../../Images/compas.png",
+    altText: "Paid Logo",
+  },
+  {
+    id: "krede",
+    name: "Krede",
+    logoSrc: "../../Images/mytherapist.png",
+    altText: "Krede Logo",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/mtn.png",
+    altText: "Mandc Logo",
+  },
 ];
 
 const InfiniteCarousel: React.FC = () => {
@@ -64,10 +105,8 @@ const Sponsors: React.FC = () => {
   return (
     <section className="dark:bg-neutral-900 py-3 backdrop-blur-sm filter overflow-hidden">
       <div className="max-w-7xl mx-auto px-1 md:px-0 text-center">
-        
-
         {/* Desktop & Tablet */}
-        <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
+        {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
           {voices.map((acc) => (
             <div
               key={acc.id}
@@ -81,10 +120,10 @@ const Sponsors: React.FC = () => {
               />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Infinite Scroll */}
-        <div className="block sm:hidden">
+        <div className="block ">
           <InfiniteCarousel />
         </div>
       </div>

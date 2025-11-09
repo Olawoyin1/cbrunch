@@ -167,10 +167,35 @@ export default function Speakers() {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    // responsive: [
+    //   { breakpoint: 1024, settings: { slidesToShow: 3 } },
+    //   { breakpoint: 768, settings: { slidesToShow: 1 } },
+    // ],
+
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
+    {
+      breakpoint: 1024, // tablets and below
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768, // mobile landscape and below
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480, // small mobile screens
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false, // optional
+      },
+    },
+  ],
   };
 
   return (

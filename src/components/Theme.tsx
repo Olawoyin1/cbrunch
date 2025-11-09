@@ -4,8 +4,6 @@ import type { Variants } from "framer-motion";
 
 
 import { VscRocket } from "react-icons/vsc";
-import { LuBriefcaseBusiness } from "react-icons/lu";
-import { BsCpu } from "react-icons/bs";
 
 export default function Theme() {
  const container: Variants = {
@@ -71,7 +69,7 @@ const item: Variants = {
           </motion.h2>
 
           <motion.p
-            className="text-sm md:text-xl text-gray-300 leading-relaxed mb-12"
+            className="text-sm md:text-xl text-gray-300 leading-relaxed"
             variants={item}
           >
             This year's edition explores how technology, lifestyle, and work
@@ -80,40 +78,7 @@ const item: Variants = {
             designed to help you thrive, not just survive in the digital age.
           </motion.p>
 
-          <motion.div
-            className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto"
-            variants={container}
-          >
-            <motion.div
-              variants={item}
-              className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
-            >
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-rose-500 rounded-lg flex items-center justify-center">
-                <BsCpu className="w-6 h-6" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-semibold text-lg mb-2">Tech Innovation</h3>
-                <p className="text-gray-400 text-sm">
-                  AI, automation, and digital tools shaping tomorrow's workplace
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              variants={item}
-              className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
-            >
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
-                <LuBriefcaseBusiness className="w-6 h-6" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-semibold text-lg mb-2">Career Evolution</h3>
-                <p className="text-gray-400 text-sm">
-                  Navigating modern career paths in a changing world of work
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
+         
         </motion.div>
       </motion.div>
     </section>
