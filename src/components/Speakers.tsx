@@ -356,7 +356,7 @@ export default function Speakers() {
       image: "../../Images/s2.jpeg",
     },
     {
-      name: "Bilta",
+      name: "Binta",
       title: "Senior Manager, Career Advancement centre Miva Open University",
       image: "../../Images/miva.jpeg",
     },
