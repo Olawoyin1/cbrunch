@@ -1,12 +1,91 @@
 // import { button } from "@/components/ui/button";
 import { Handshake, ArrowRight } from "lucide-react";
 import { PointerHighlight } from "../components/ui/pointer-highlight";
+import { LuTickets } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 // import { openMainstackCheckout } from "../utils/mainstackCheckout";
 
-import { LuTickets } from "react-icons/lu";
+// const Countdown: React.FC = () => {
+//   const targetDate = new Date("2025-11-29T00:00:00").getTime();
+//   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+//   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
 
+//   function calculateTimeLeft() {
+//     const now = new Date().getTime();
+//     const difference = targetDate - now;
+
+//     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+//     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+//     const minutes = Math.floor((difference / (1000 * 60)) % 60);
+//     const seconds = Math.floor((difference / 1000) % 60);
+
+//     return { days, hours, minutes, seconds };
+//   }
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setTimeLeft((prev) => {
+//         const updated = calculateTimeLeft();
+//         setPrevSeconds(prev.seconds);
+//         return updated;
+//       });
+//     }, 1000);
+//     return () => clearInterval(timer);
+//   }, []);
+
+//   return (
+//     <div className="flex justify-center items-center  font-mono">
+//       <div className="text-center space-x-6 flex text-5xl md:text-7xl">
+//         <TimeBlock label="Days" value={timeLeft.days} />
+//         <TimeBlock label="Hours" value={timeLeft.hours} />
+//         <TimeBlock label="Minutes" value={timeLeft.minutes} />
+//         <AnimatedSeconds value={timeLeft.seconds} prevValue={prevSeconds} />
+//       </div>
+//     </div>
+//   );
+// };
+
+const TimeBlock = ({ label, value }: { label: string; value: number }) => (
+  <div className="flex flex-col items-center relative">
+    <div className="h-[40px] w-[100px] flex justify-center items-center flex-col overflow-hidden">
+      <span className="absolute text-3xl font-bold">
+        {value.toString().padStart(2, "0")}
+      </span>
+    </div>
+    <span className="text-sm text-gray-400">{label}</span>
+  </div>
+);
 
 const Hero = () => {
+  const targetDate = new Date("2025-11-29T00:00:00").getTime();
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
+
+  function calculateTimeLeft() {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    return { days, hours, minutes, seconds };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        const updated = calculateTimeLeft();
+        setPrevSeconds(prev.seconds);
+        return updated;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-[800px] md:min-h-screen flex items-center text-white justify-center overflow-hidden">
       {/* white Image with Overlay */}
@@ -24,6 +103,17 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 px-4 py-12 md:py-32">
+          <div className="flex mb-1 justify-center items-center  font-mono">
+            <div className="text-center space-x-0 flex text-2xl md:text-4xl">
+              <TimeBlock label="Days" value={timeLeft.days} />
+              <TimeBlock label="Hours" value={timeLeft.hours} />
+              <TimeBlock label="Minutes" value={timeLeft.minutes} />
+              <AnimatedSeconds
+                value={timeLeft.seconds}
+                prevValue={prevSeconds}
+              />
+            </div>
+          </div>
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-4xl rounded-full bg-[#7c3bed]/10 border border-[#7c3bed]/20 text-sm font-medium animate-scale-in">
@@ -56,27 +146,16 @@ const Hero = () => {
             experiences.
           </p>
 
-
-
-
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            
-            <a
-             href="https://mainstack.store/thegenzhr/career-brunch"
-             >
-
-
-              <button  className="flex rounded cursor-pointer bg-primary px-4 py-2 items-center gap-2">
+            <a href="https://mainstack.store/thegenzhr/career-brunch">
+              <button className="flex rounded cursor-pointer bg-primary px-4 py-2 items-center gap-2">
                 <LuTickets className="w-5 h-5" />
                 Get Tickets
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
-             </a>
+            </a>
 
-             
-
-            
             <a href="https://forms.gle/SPsMCsaDnHkUso446">
               <button className="flex cursor-pointer bg-sec px-4 py-2 rounded items-center gap-2">
                 <Handshake className="w-5 h-5" />
@@ -105,3 +184,29 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const AnimatedSeconds = ({
+  value,
+}: //   prevValue,
+{
+  value: number;
+  prevValue: number;
+}) => (
+  <div className="flex flex-col items-center relative">
+    <div className="h-[40px] w-[100px] flex justify-center items-center overflow-hidden">
+      <AnimatePresence mode="popLayout">
+        <motion.span
+          key={value}
+          initial={{ y: 40, opacity: 0, rotateX: 90 }}
+          animate={{ y: 0, opacity: 1, rotateX: 0 }}
+          exit={{ y: -40, opacity: 0, rotateX: -90 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="absolute text-3xl font-bold"
+        >
+          {value.toString().padStart(2, "0")}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+    <span className="text-sm  text-gray-400">Seconds</span>
+  </div>
+);
