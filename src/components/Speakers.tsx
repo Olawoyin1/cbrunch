@@ -276,7 +276,7 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Mic2, ChevronLeft, ChevronRight } from "lucide-react";
 
