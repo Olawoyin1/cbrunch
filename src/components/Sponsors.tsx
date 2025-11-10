@@ -71,6 +71,12 @@ const voices: Voice[] = [
     logoSrc: "../../Images/ruxe.jpeg",
     altText: "Mandc Logo",
   },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/drive.jpeg",
+    altText: "Mandc Logo",
+  },
 ];
 
 const InfiniteCarousel: React.FC = () => {
@@ -115,7 +121,7 @@ const InfiniteCarousel: React.FC = () => {
 
 const Sponsors: React.FC = () => {
   return (
-    <section className="dark:bg-neutral-900 py-3 backdrop-blur-sm filter overflow-hidden">
+    <section className="dark:bg-neutral-900 py-5 backdrop-blur-sm filter overflow-hidden">
       <div className="max-w-7xl mx-auto px-1 md:px-0 text-center">
         {/* Desktop & Tablet */}
         {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
