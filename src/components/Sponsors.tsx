@@ -59,6 +59,18 @@ const voices: Voice[] = [
     logoSrc: "../../Images/mtn.png",
     altText: "Mandc Logo",
   },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/new1.jpeg",
+    altText: "Mandc Logo",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/ruxe.jpeg",
+    altText: "Mandc Logo",
+  },
 ];
 
 const InfiniteCarousel: React.FC = () => {
