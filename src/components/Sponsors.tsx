@@ -20,6 +20,12 @@ const voices: Voice[] = [
   {
     id: "piggyvest",
     name: "Piggyvest",
+    logoSrc: "../../Images/xara.png",
+    altText: "Piggyvest Logo",
+  },
+  {
+    id: "piggyvest",
+    name: "Piggyvest",
     logoSrc: "../../Images/yolat.png",
     altText: "Piggyvest Logo",
   },
@@ -74,13 +80,31 @@ const voices: Voice[] = [
   {
     id: "mandc",
     name: "Mandc",
-    logoSrc: "../../Images/drive.jpeg",
+    logoSrc: "../../Images/drive.png",
+    altText: "Mandc Logo",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/wb.png",
+    altText: "Mandc Logo",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/sc.png",
+    altText: "Mandc Logo",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
+    logoSrc: "../../Images/pre.png",
     altText: "Mandc Logo",
   },
 ];
 
 const InfiniteCarousel: React.FC = () => {
-  const baseVelocity = -15; // adjust for desired scroll speed
+  const baseVelocity = -100; // adjust for desired scroll speed
   const x = useRef(0);
   const innerRef = useRef<HTMLDivElement>(null);
 
@@ -109,7 +133,7 @@ const InfiniteCarousel: React.FC = () => {
             <img
               src={acc.logoSrc}
               alt={acc.altText || acc.name}
-              className="max-h-16 w-auto object-contain md:grayscale hover:grayscale-0 transition duration-300"
+              className="max-h-16 w-auto object-contain   transition duration-300"
               title={acc.name}
             />
           </div>
@@ -122,7 +146,7 @@ const InfiniteCarousel: React.FC = () => {
 const Sponsors: React.FC = () => {
   return (
     <section className="dark:bg-neutral-900 py-5 backdrop-blur-sm filter overflow-hidden">
-      <div className="max-w-7xl mx-auto px-1 md:px-0 text-center">
+      <div className="px-1 md:px-0 text-center">
         {/* Desktop & Tablet */}
         {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
           {voices.map((acc) => (
