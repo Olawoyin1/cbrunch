@@ -130,7 +130,7 @@ export default function Speakers() {
     },
     {
       name: "Ifemide Livingfont ",
-      title: "Software Dev, Meta",
+      title: "GPS Asscoiate, bank of America",
       image: "../../Images/il.jpeg",
     },
     {

@@ -1,12 +1,13 @@
 // src/components/Sponsors.tsx
 import React, { useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
+import {Link} from "react-router-dom"
 
 interface Voice {
   id: string;
   name: string;
   logoSrc: string;
-  altText: string;
+  website: string;
 }
 
 const voices: Voice[] = [
@@ -14,92 +15,92 @@ const voices: Voice[] = [
     id: "mtn",
     name: "Mtn",
     logoSrc: "../../Images/sponsor1.png",
-    altText: "Mtn Logo",
+    website: "https://tusvintage.com/",
   },
-  // { id: "spotify", name: "Spotify", logoSrc: "../../Images/compass.png", altText: "Spotify Logo" },
+  // { id: "spotify", name: "Spotify", logoSrc: "../../Images/compass.png", website: "Spotify Logo" },
   {
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/xara.png",
-    altText: "Piggyvest Logo",
+    website: "https://usexara.ai/",
   },
   {
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/yolat.png",
-    altText: "Piggyvest Logo",
+    website: "Piggyvest Logo",
   },
   {
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/pt1.jpeg",
-    altText: "Piggyvest Logo",
+    website: "https://techcabal.com/",
   },
   {
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/pt2.jpeg",
-    altText: "Piggyvest Logo",
+    website: "Piggyvest Logo",
   },
   {
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/pt3.jpeg",
-    altText: "Piggyvest Logo",
+    website: "https://www.remoteworkher.com/",
   },
   {
     id: "paid",
     name: "Paid",
     logoSrc: "../../Images/compas.png",
-    altText: "Paid Logo",
+    website: "Paid Logo",
   },
   {
     id: "krede",
     name: "Krede",
     logoSrc: "../../Images/mytherapist.png",
-    altText: "Krede Logo",
+    website: "Krede Logo",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/mtn.png",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/new1.jpeg",
-    altText: "Mandc Logo",
+    website: "https://www.bizflex.africa/",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/ruxe.jpeg",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/drive.png",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/wb.png",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/sc.png",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/pre.png",
-    altText: "Mandc Logo",
+    website: "https://www.google.com",
   },
 ];
 
@@ -124,19 +125,20 @@ const InfiniteCarousel: React.FC = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
+      
       <div ref={innerRef} className="flex items-center  gap-8">
         {[...voices, ...voices].map((acc, i) => (
-          <div
+          <Link to={acc.website}
             key={acc.id + i}
             className="flex-shrink-0 w-32 flex items-center justify-center"
           >
             <img
               src={acc.logoSrc}
-              alt={acc.altText || acc.name}
+              alt={acc.website || acc.name}
               className="max-h-16 w-auto object-contain   transition duration-300"
               title={acc.name}
             />
-          </div>
+          </Link>
         ))}
       </div>
     </div>
