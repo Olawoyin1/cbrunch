@@ -147,23 +147,7 @@ const Sponsors: React.FC = () => {
   return (
     <section className="dark:bg-neutral-900 py-5 backdrop-blur-sm filter overflow-hidden">
       <div className="px-1 md:px-0 text-center">
-        {/* Desktop & Tablet */}
-        {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
-          {voices.map((acc) => (
-            <div
-              key={acc.id}
-              className="flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src={acc.logoSrc}
-                alt={acc.altText || acc.name}
-                className="max-h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
-                title={acc.name}
-              />
-            </div>
-          ))}
-        </div> */}
-
+       
         {/* Mobile Infinite Scroll */}
         <div className="block ">
           <InfiniteCarousel />

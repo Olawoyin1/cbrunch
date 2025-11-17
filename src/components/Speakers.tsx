@@ -113,6 +113,31 @@ export default function Speakers() {
       title: "Cinematographer, Photographer, Filmmaker, and Visual storyteller",
       image: "../../Images/na.jpeg",
     },
+    {
+      name: "Ebenezer Akintomide",
+      title: "People and Culture Lead Cowrywise",
+      image: "../../Images/ea.jpeg",
+    },
+    {
+      name: "Chukwu Adaeze Victoria",
+      title: "Brand Designer & Strategist",
+      image: "../../Images/cav.jpeg",
+    },
+    {
+      name: "David Evbodaghe",
+      title: "Software Dev, Meta",
+      image: "../../Images/david.jpeg",
+    },
+    {
+      name: "Ifemide Livingfont ",
+      title: "Software Dev, Meta",
+      image: "../../Images/il.jpeg",
+    },
+    {
+      name: "Goodness Armstrong ",
+      title: "Global Talent RecruiterHR, Consultant Founder, Startuphr Africa",
+      image: "../../Images/ga.jpeg",
+    },
   ];
 
   const settings = {
