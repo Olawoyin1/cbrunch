@@ -100,7 +100,7 @@ export default function Speakers() {
     },
     {
       name: "Emmanuel Faith",
-      title: "HR Consultant and Capacity Builder.",
+      title: "HR Consultant and Capacity Builder",
       image: "../../Images/ef.png",
     },
     {
@@ -110,7 +110,7 @@ export default function Speakers() {
     },
     {
       name: "Nora Awolowo",
-      title: "cinematographer, photographer, filmmaker, and visual storyteller",
+      title: "Cinematographer, Photographer, Filmmaker, and Visual storyteller",
       image: "../../Images/na.jpeg",
     },
   ];
