@@ -80,12 +80,12 @@ export default function Speakers() {
     },
     {
       name: "Binta",
-      title: "Senior Manager, Career Advancement centre Miva Open University",
+      title: "Senior Manager, Career Advancement Centre Miva Open University",
       image: "../../Images/miva.jpeg",
     },
     {
       name: "Ebuka Emmanuel Arinze",
-      title: "Chief Product Officer",
+      title: "Chief Product Officer, Kredete",
       image: "../../Images/ebuka.jpg",
     },
     {
@@ -156,6 +156,9 @@ export default function Speakers() {
     speed: 600,
     slidesToShow,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // 3 seconds
+    pauseOnHover: true,
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
