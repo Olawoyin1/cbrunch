@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import {Menu, X } from "lucide-react";
 import { LuTickets } from "react-icons/lu";
 import { openMainstackCheckout } from "../utils/mainstackCheckout";
+import { Link } from "react-router-dom";
+
 // import { Link } from "react-router-dom";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,8 +30,8 @@ const Navbar = () => {
     { label: "About", id: "about" },
     { label: "Features", id: "features" },
     { label: "Speakers", id: "speakers" },
-    { label: "Partners", id: "partners" },
     { label: "Details", id: "details" },
+    { label: "Get Hired", id: "gethired" },
   ];
 
   return (
@@ -75,7 +77,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
@@ -87,7 +89,36 @@ const Navbar = () => {
               >
                 {link.label}
               </button>
-            ))}
+            ))} */}
+
+            {navLinks.map((link) =>
+  link.label === "Get Hired" ? (
+    <Link
+      key={link.id}
+      to="https://docs.google.com/forms/u/0/d/1lOjp1foTcyIQj_Z05aT-cZSPIWgRRYXG9lPH8HWffr4/preview"
+      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+        isScrolled
+          ? "text-gray-800 hover:text-black"
+          : "text-white hover:text-gray-200"
+      }`}
+    >
+      {link.label}
+    </Link>
+  ) : (
+    <button
+      key={link.id}
+      onClick={() => scrollToSection(link.id)}
+      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+        isScrolled
+          ? "text-gray-800 hover:text-black"
+          : "text-white hover:text-gray-200"
+      }`}
+    >
+      {link.label}
+    </button>
+  )
+)}
+
           </div>
 
           {/* CTA Button */}
@@ -162,7 +193,35 @@ const Navbar = () => {
             }`}
           >
             <div className="px-6 py-6 space-y-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link) =>
+  link.label === "Get Hired" ? (
+    <Link
+      key={link.id}
+      to="/get-hired"
+      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+        isScrolled
+          ? "text-gray-800 hover:text-black"
+          : "text-white hover:text-gray-200"
+      }`}
+    >
+      {link.label}
+    </Link>
+  ) : (
+    <button
+      key={link.id}
+      onClick={() => scrollToSection(link.id)}
+      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+        isScrolled
+          ? "text-gray-800 hover:text-black"
+          : "text-white hover:text-gray-200"
+      }`}
+    >
+      {link.label}
+    </button>
+  )
+)}
+
+              {/* {navLinks.map((link) => (
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
@@ -171,7 +230,7 @@ const Navbar = () => {
                 >
                   {link.label}
                 </motion.button>
-              ))}
+              ))} */}
               <motion.button
               onClick={openMainstackCheckout}
                 whileHover={{ scale: 1.05 }}
