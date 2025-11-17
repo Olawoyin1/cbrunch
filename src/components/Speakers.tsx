@@ -105,7 +105,7 @@ export default function Speakers() {
     },
     {
       name: "Maryam Yusuf",
-      title: "HR consultant and HR coach",
+      title: "HR Consultant and HR Coach",
       image: "../../Images/my.jpeg",
     },
     {
@@ -130,13 +130,23 @@ export default function Speakers() {
     },
     {
       name: "Ifemide Livingfont ",
-      title: "GPS Asscoiate, bank of America",
+      title: "GPS Asscoiate, Bank of America",
       image: "../../Images/il.jpeg",
     },
     {
       name: "Goodness Armstrong ",
-      title: "Global Talent RecruiterHR, Consultant Founder, Startuphr Africa",
+      title: "Founder, Startuphr Africa",
       image: "../../Images/ga.jpeg",
+    },
+    {
+      name: "Achigonye Johnpaul  ",
+      title: "Founder & CEO Sendcoins",
+      image: "../../Images/aj.jpeg",
+    },
+    {
+      name: "Amaka Amaku   ",
+      title: "Entrepreneur and Content Creator",
+      image: "../../Images/aa.jpg",
     },
   ];
 

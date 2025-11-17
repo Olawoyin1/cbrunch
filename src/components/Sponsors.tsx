@@ -28,7 +28,7 @@ const voices: Voice[] = [
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/yolat.png",
-    website: "Piggyvest Logo",
+    website: "/",
   },
   {
     id: "piggyvest",
@@ -40,7 +40,7 @@ const voices: Voice[] = [
     id: "piggyvest",
     name: "Piggyvest",
     logoSrc: "../../Images/pt2.jpeg",
-    website: "Piggyvest Logo",
+    website: "/",
   },
   {
     id: "piggyvest",
@@ -52,19 +52,19 @@ const voices: Voice[] = [
     id: "paid",
     name: "Paid",
     logoSrc: "../../Images/compas.png",
-    website: "Paid Logo",
+    website: "https://agt.compasai.com/",
   },
   {
     id: "krede",
     name: "Krede",
     logoSrc: "../../Images/mytherapist.png",
-    website: "Krede Logo",
+    website: "/",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/mtn.png",
-    website: "https://www.google.com",
+    website: "/",
   },
   {
     id: "mandc",
@@ -75,32 +75,38 @@ const voices: Voice[] = [
   {
     id: "mandc",
     name: "Mandc",
+    logoSrc: "../../Images/gs.jpeg",
+    website: "/",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
     logoSrc: "../../Images/ruxe.jpeg",
-    website: "https://www.google.com",
+    website: "/",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/drive.png",
-    website: "https://www.google.com",
+    website: "/",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/wb.png",
-    website: "https://www.google.com",
+    website: "https://book.withsplice.com/whitneywhytbeauty",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/sc.png",
-    website: "https://www.google.com",
+    website: "/",
   },
   {
     id: "mandc",
     name: "Mandc",
     logoSrc: "../../Images/pre.png",
-    website: "https://www.google.com",
+    website: "/",
   },
 ];
 
