@@ -115,7 +115,7 @@ export default function Speakers() {
     },
     {
       name: "Ebenezer Akintomide",
-      title: "People and Culture Lead Cowrywise",
+      title: "People and Culture Lead, Cowrywise",
       image: "../../Images/ea.jpeg",
     },
     {
@@ -130,7 +130,7 @@ export default function Speakers() {
     },
     {
       name: "Ifemide Livingfont ",
-      title: "GPS Asscoiate, Bank of America",
+      title: "GPS Associate, Bank of America",
       image: "../../Images/il.jpeg",
     },
     {
@@ -140,7 +140,7 @@ export default function Speakers() {
     },
     {
       name: "Achigonye Johnpaul  ",
-      title: "Founder & CEO Sendcoins",
+      title: "Founder & CEO, Sendcoins",
       image: "../../Images/aj.jpeg",
     },
     {
