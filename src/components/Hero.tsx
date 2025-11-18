@@ -66,20 +66,20 @@ const Hero = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
 
-  const [showModal, setShowModal] = useState(false);
+//   const [showModal, setShowModal] = useState(false);
 
- useEffect(() => {
-    const hasSeen = localStorage.getItem("seen_welcome_modal");
+//  useEffect(() => {
+//     const hasSeen = localStorage.getItem("seen_welcome_modal");
 
-    if (!hasSeen) {
-      const timer = setTimeout(() => {
-        setShowModal(true);
-        localStorage.setItem("seen_welcome_modal", "true");
-      }, 10000); // 10 seconds delay
+//     if (!hasSeen) {
+//       const timer = setTimeout(() => {
+//         setShowModal(true);
+//         localStorage.setItem("seen_welcome_modal", "true");
+//       }, 10000); // 10 seconds delay
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+//       return () => clearTimeout(timer);
+//     }
+//   }, []);
 
 
 
