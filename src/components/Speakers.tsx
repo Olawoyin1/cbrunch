@@ -134,6 +134,11 @@ export default function Speakers() {
       image: "../../Images/il.jpeg",
     },
     {
+      name: "Salami Abdullateef",
+      title: "HR Professional",
+      image: "../../Images/salam.jpeg",
+    },
+    {
       name: "Goodness Armstrong ",
       title: "Founder, Startuphr Africa",
       image: "../../Images/ga.jpeg",

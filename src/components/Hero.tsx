@@ -4,6 +4,7 @@ import { PointerHighlight } from "../components/ui/pointer-highlight";
 import { LuTickets } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// import CustomModal from "./CustomModal";
 
 // import { openMainstackCheckout } from "../utils/mainstackCheckout";
 
@@ -58,10 +59,29 @@ const TimeBlock = ({ label, value }: { label: string; value: number }) => (
   </div>
 );
 
+
+
 const Hero = () => {
   const targetDate = new Date("2025-11-29T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
+
+  const [showModal, setShowModal] = useState(false);
+
+ useEffect(() => {
+    const hasSeen = localStorage.getItem("seen_welcome_modal");
+
+    if (!hasSeen) {
+      const timer = setTimeout(() => {
+        setShowModal(true);
+        localStorage.setItem("seen_welcome_modal", "true");
+      }, 10000); // 10 seconds delay
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+
 
   function calculateTimeLeft() {
     const now = new Date().getTime();
@@ -179,6 +199,24 @@ const Hero = () => {
           <ArrowRight className="w-4 h-4 rotate-90" />
         </div>
       </div>
+
+
+
+
+
+      {/* <CustomModal open={showModal} onClose={() => setShowModal(false)}>
+        <h2 className="text-xl font-bold mb-2">Welcome!</h2>
+        <p className="mb-4 text-gray-600">
+          This popup will only show once. Thanks for visiting 🎉
+        </p>
+        <button
+          className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition"
+          onClick={() => setShowModal(false)}
+        >
+          Close
+        </button>
+      </CustomModal> */}
+
     </section>
   );
 };
