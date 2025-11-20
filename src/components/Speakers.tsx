@@ -129,6 +129,11 @@ export default function Speakers() {
       image: "../../Images/david.jpeg",
     },
     {
+      name: "Natasha Nissar",
+      title: "Chief of Staff, BMONI",
+      image: "../../Images/nn.jpeg",
+    },
+    {
       name: "Ifemide Livingfont ",
       title: "GPS Associate, Bank of America",
       image: "../../Images/il.jpeg",
@@ -137,6 +142,16 @@ export default function Speakers() {
       name: "Salami Abdullateef",
       title: "HR Professional",
       image: "../../Images/salam.jpeg",
+    },
+    {
+      name: "Oluchukwu Chidiaka",
+      title: "Personal Finance Coach",
+      image: "../../Images/ns.jpeg",
+    },
+    {
+      name: "Ama Udofa",
+      title: "Storyteller/Content Marketing Lead, Grey",
+      image: "../../Images/ao.jpeg",
     },
     {
       name: "Goodness Armstrong ",

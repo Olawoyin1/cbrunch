@@ -99,6 +99,12 @@ const voices: Voice[] = [
   {
     id: "mandc",
     name: "Mandc",
+    logoSrc: "../../Images/bmon.jpeg",
+    website: "https://book.withsplice.com/whitneywhytbeauty",
+  },
+  {
+    id: "mandc",
+    name: "Mandc",
     logoSrc: "../../Images/sc.png",
     website: "/",
   },
