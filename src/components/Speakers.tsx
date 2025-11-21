@@ -100,7 +100,7 @@ export default function Speakers() {
     },
     {
       name: "Emmanuel Faith",
-      title: "HR Consultant and Capacity Builder",
+      title: "Founder, HR Clinic",
       image: "../../Images/ef.png",
     },
     {
