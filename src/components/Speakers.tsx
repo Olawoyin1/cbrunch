@@ -151,7 +151,7 @@ export default function Speakers() {
     {
       name: "Toyosi Aolarin ",
       title: "CEO, Yolat",
-      image: "../../Images/yolat.png",
+      image: "../../Images/yolat.jpeg",
     },
     {
       name: "Salami Abdullateef",
