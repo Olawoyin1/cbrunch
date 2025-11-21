@@ -139,6 +139,21 @@ export default function Speakers() {
       image: "../../Images/il.jpeg",
     },
     {
+      name: "Kemi Osayemi ",
+      title: "Senior Product Manager",
+      image: "../../Images/ko.jpeg",
+    },
+    {
+      name: "Seun Lanlege ",
+      title: "Co-founder of Polytope Labs",
+      image: "../../Images/sl.jpeg",
+    },
+    {
+      name: "Toyosi Aolarin ",
+      title: "CEO, Yolat",
+      image: "../../Images/yolat.png",
+    },
+    {
       name: "Salami Abdullateef",
       title: "HR Professional",
       image: "../../Images/salam.jpeg",
