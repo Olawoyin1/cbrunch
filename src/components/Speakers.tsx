@@ -159,6 +159,16 @@ export default function Speakers() {
       image: "../../Images/salam.jpeg",
     },
     {
+      name: " O.J Tobiloba ",
+      title: "Financial Literacy Advocate, Investment Analyst & Financial Content Strategist",
+      image: "../../Images/oj.jpeg",
+    },
+    {
+      name: " Hansel Praise ",
+      title: "Contract Manager at a leading international energy conglomerate",
+      image: "../../Images/hp.jpeg",
+    },
+    {
       name: "Oluchukwu Chidiaka",
       title: "Personal Finance Coach",
       image: "../../Images/ns.jpeg",
