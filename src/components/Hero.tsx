@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 // import { openMainstackCheckout } from "../utils/mainstackCheckout";
 
 // const Countdown: React.FC = () => {
-//   const targetDate = new Date("2025-11-29T00:00:00").getTime();
+//   const targetDate = new Date("2025-11-29T10:00:00").getTime();
 //   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 //   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
 
@@ -64,7 +64,7 @@ const TimeBlock = ({ label, value }: { label: string; value: number }) => (
 
 
 const Hero = () => {
-  const targetDate = new Date("2025-11-29T00:00:00").getTime();
+  const targetDate = new Date("2025-11-29T10:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
 

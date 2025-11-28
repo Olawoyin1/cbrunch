@@ -180,25 +180,38 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`md:hidden border-t overflow-hidden transition-colors duration-300 ${
-              isScrolled
-                ? "bg-white text-black border-gray-200"
-                : "bg-black/80 text-white border-transparent backdrop-blur-md"
-            }`}
-          >
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden"
+              style={{ top: isScrolled ? '64px' : '80px' }}
+            />
+            
+            {/* Menu */}
+            <motion.div
+              key="mobile-menu"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className={`md:hidden border-t overflow-hidden transition-colors duration-300 relative ${
+                isScrolled
+                  ? "bg-white text-black border-gray-200"
+                  : "bg-black/95 text-white border-transparent backdrop-blur-md"
+              }`}
+            >
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link) =>
   link.label === "Get Hired" ? (
     <Link
       key={link.id}
-      to="/get-hired"
-      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+      to="https://docs.google.com/forms/u/0/d/1lOjp1foTcyIQj_Z05aT-cZSPIWgRRYXG9lPH8HWffr4/preview"
+      onClick={() => setIsMobileMenuOpen(false)}
+      className={`block w-full text-left py-2 text-base font-medium transition-colors duration-200 ${
         isScrolled
           ? "text-gray-800 hover:text-black"
           : "text-white hover:text-gray-200"
@@ -210,7 +223,7 @@ const Navbar = () => {
     <button
       key={link.id}
       onClick={() => scrollToSection(link.id)}
-      className={`text-base cursor-pointer font-medium transition-colors duration-200 ${
+      className={`block w-full text-left py-2 text-base font-medium transition-colors duration-200 ${
         isScrolled
           ? "text-gray-800 hover:text-black"
           : "text-white hover:text-gray-200"
@@ -232,15 +245,18 @@ const Navbar = () => {
                 </motion.button>
               ))} */}
               <motion.button
-              onClick={openMainstackCheckout}
+              onClick={() => {
+                openMainstackCheckout();
+                setIsMobileMenuOpen(false);
+              }}
                 whileHover={{ scale: 1.05 }}
-                className={`flex items-center gap-2 w-full justify-center py-2.5 rounded-full transition-all duration-300 ${
+                className={`flex items-center gap-2 w-full justify-center py-3 rounded-lg font-medium transition-all duration-300 mt-2 ${
                   isScrolled
-                    ? "bg-primary text-white hover:bg-gray-800"
+                    ? "bg-black text-white hover:bg-gray-800"
                     : "bg-primary text-white hover:opacity-90"
                 }`}
               >
-                <LuTickets className="w-4 h-4" />
+                <LuTickets className="w-5 h-5" />
                 Get Tickets
               </motion.button>
             </div>
