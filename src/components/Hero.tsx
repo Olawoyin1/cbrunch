@@ -6,49 +6,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomModal from "./CustomModal";
 import { Link } from "react-router-dom";
-// import CustomModal from "./CustomModal";
 
-// import { openMainstackCheckout } from "../utils/mainstackCheckout";
-
-// const Countdown: React.FC = () => {
-//   const targetDate = new Date("2025-11-29T10:00:00").getTime();
-//   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-//   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
-
-//   function calculateTimeLeft() {
-//     const now = new Date().getTime();
-//     const difference = targetDate - now;
-
-//     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-//     const minutes = Math.floor((difference / (1000 * 60)) % 60);
-//     const seconds = Math.floor((difference / 1000) % 60);
-
-//     return { days, hours, minutes, seconds };
-//   }
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setTimeLeft((prev) => {
-//         const updated = calculateTimeLeft();
-//         setPrevSeconds(prev.seconds);
-//         return updated;
-//       });
-//     }, 1000);
-//     return () => clearInterval(timer);
-//   }, []);
-
-//   return (
-//     <div className="flex justify-center items-center  font-mono">
-//       <div className="text-center space-x-6 flex text-5xl md:text-7xl">
-//         <TimeBlock label="Days" value={timeLeft.days} />
-//         <TimeBlock label="Hours" value={timeLeft.hours} />
-//         <TimeBlock label="Minutes" value={timeLeft.minutes} />
-//         <AnimatedSeconds value={timeLeft.seconds} prevValue={prevSeconds} />
-//       </div>
-//     </div>
-//   );
-// };
 
 const TimeBlock = ({ label, value }: { label: string; value: number }) => (
   <div className="flex flex-col items-center relative">
@@ -125,12 +83,16 @@ const Hero = () => {
     const now = new Date().getTime();
     const difference = targetDate - now;
 
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0, isExpired: true };
+    }
+
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((difference / (1000 * 60)) % 60);
     const seconds = Math.floor((difference / 1000) % 60);
 
-    return { days, hours, minutes, seconds };
+    return { days, hours, minutes, seconds, isExpired: false };
   }
 
   useEffect(() => {
@@ -161,17 +123,31 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 px-4 py-12 md:py-32">
-          <div className="flex mb-1 justify-center items-center  font-mono">
-            <div className="text-center space-x-0 flex text-2xl md:text-4xl">
-              <TimeBlock label="Days" value={timeLeft.days} />
-              <TimeBlock label="Hours" value={timeLeft.hours} />
-              <TimeBlock label="Minutes" value={timeLeft.minutes} />
-              <AnimatedSeconds
-                value={timeLeft.seconds}
-                prevValue={prevSeconds}
-              />
+          {timeLeft.isExpired ? (
+            <div className="flex mb-1 justify-center items-center">
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-center px-6 py-4 bg-primary/20 backdrop-blur-md rounded-2xl border border-primary/30"
+              >
+                <h2 className="text-2xl md:text-4xl font-bold mb-2">🎉 The Event is Live!</h2>
+                <p className="text-base md:text-xl">Join us now at Career Brunch 2.0</p>
+              </motion.div>
             </div>
-          </div>
+          ) : (
+            <div className="flex mb-1 justify-center items-center  font-mono">
+              <div className="text-center space-x-0 flex text-2xl md:text-4xl">
+                <TimeBlock label="Days" value={timeLeft.days} />
+                <TimeBlock label="Hours" value={timeLeft.hours} />
+                <TimeBlock label="Minutes" value={timeLeft.minutes} />
+                <AnimatedSeconds
+                  value={timeLeft.seconds}
+                  prevValue={prevSeconds}
+                />
+              </div>
+            </div>
+          )}
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-4xl rounded-full bg-[#7c3bed]/10 border border-[#7c3bed]/20 text-sm font-medium animate-scale-in">
