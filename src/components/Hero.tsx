@@ -4,8 +4,8 @@ import { PointerHighlight } from "../components/ui/pointer-highlight";
 import { LuTickets } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import CustomModal from "./CustomModal";
-import { Link } from "react-router-dom";
+// import CustomModal from "./CustomModal";
+// import { Link } from "react-router-dom";
 
 
 const TimeBlock = ({ label, value }: { label: string; value: number }) => (
@@ -26,8 +26,8 @@ const Hero = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [prevSeconds, setPrevSeconds] = useState(timeLeft.seconds);
 
-  const [showModal, setShowModal] = useState(false);
-  const [hasStartedTimer, setHasStartedTimer] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  // const [hasStartedTimer, setHasStartedTimer] = useState(false);
 
   // useEffect(() => {
   //   // Check if user has already seen the popup
@@ -52,29 +52,29 @@ const Hero = () => {
   // }, [hasStartedTimer]);
 
 
-    useEffect(() => {
-    // Get today's date string
-    const today = new Date().toISOString().split("T")[0];
+  //   useEffect(() => {
+  //   // Get today's date string
+  //   const today = new Date().toISOString().split("T")[0];
 
-    // Check last date modal was shown
-    const lastShownDate = localStorage.getItem("laptopGiveawayLastShown");
+  //   // Check last date modal was shown
+  //   const lastShownDate = localStorage.getItem("laptopGiveawayLastShown");
 
-    if (lastShownDate === today) return; // Already shown today
+  //   if (lastShownDate === today) return; // Already shown today
 
-    const handleScroll = () => {
-      if (!hasStartedTimer) {
-        setHasStartedTimer(true);
+  //   const handleScroll = () => {
+  //     if (!hasStartedTimer) {
+  //       setHasStartedTimer(true);
 
-        setTimeout(() => {
-          setShowModal(true);
-          localStorage.setItem("laptopGiveawayLastShown", today); // Store today
-        }, 6000);
-      }
-    };
+  //       setTimeout(() => {
+  //         setShowModal(true);
+  //         localStorage.setItem("laptopGiveawayLastShown", today); // Store today
+  //       }, 6000);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasStartedTimer]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [hasStartedTimer]);
 
 
 
@@ -131,8 +131,8 @@ const Hero = () => {
                 transition={{ duration: 0.5 }}
                 className="text-center px-6 py-4 bg-primary/20 backdrop-blur-md rounded-2xl border border-primary/30"
               >
-                <h2 className="text-2xl md:text-4xl font-bold mb-2">🎉 The Event is Live!</h2>
-                <p className="text-base md:text-xl">Join us now at Career Brunch 2.0</p>
+                <h2 className="text-2xl md:text-4xl font-bold mb-2">Career Brunch 2.0 was a success!🎉</h2>
+                <p className="text-base md:text-xl">Thank you to everyone who joined us. Stay tuned for the next edition.</p>
               </motion.div>
             </div>
           ) : (
@@ -215,7 +215,7 @@ const Hero = () => {
       </div>
 
 
-<CustomModal open={showModal} onClose={() => setShowModal(false)}>
+{/* <CustomModal open={showModal} onClose={() => setShowModal(false)}>
   <div className="text-center">
     <h2 className="font-bold text-base mb-2">🎉Attend Career Brunch 2.0 and stand a chance to Win a Laptop </h2>
     <p className="mb-4 text-sm">Join us at Career Brunch 2.0 for a chance to win a brand-new laptop. Don’t miss out. This could be your upgrade moment.</p>
@@ -226,7 +226,7 @@ const Hero = () => {
       Join the Giveaway
     </Link>
   </div>
-</CustomModal>
+</CustomModal> */}
 
 
 
