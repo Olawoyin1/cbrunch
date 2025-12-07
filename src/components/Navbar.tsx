@@ -141,9 +141,10 @@ const Navbar = () => {
 
               
             <button
+              disabled
               onClick={openMainstackCheckout}
             // id="mainstack_checkout_btn"
-              className={`flex cursor-pointer items-center rounded gap-2 px-4 py-2 transition-all duration-300  ${
+              className={`flex cursor-not-allowed items-center rounded gap-2 px-4 py-2 transition-all duration-300 opacity-50 ${
                 isScrolled
                 ? "bg-black text-white hover:bg-gray-800"
                 : "bg-primary text-white hover:opacity-90"
@@ -257,12 +258,13 @@ const Navbar = () => {
                 </motion.button>
               ))} */}
               <motion.button
+              disabled
               onClick={() => {
                 openMainstackCheckout();
                 setIsMobileMenuOpen(false);
               }}
                 whileHover={{ scale: 1.05 }}
-                className={`flex items-center gap-2 w-full justify-center py-3 rounded-lg font-medium transition-all duration-300 mt-2 ${
+                className={`flex items-center gap-2 w-full justify-center py-3 rounded-lg font-medium transition-all duration-300 mt-2 opacity-50 cursor-not-allowed ${
                   isScrolled
                     ? "bg-black text-white hover:bg-gray-800"
                     : "bg-primary text-white hover:opacity-90"

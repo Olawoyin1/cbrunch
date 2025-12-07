@@ -16,7 +16,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from "react";
 import "./App.css";
-import WhatsAppChat from './components/WhatsAppChat';
 import Sponsors from './components/Sponsors';
 // import Countdown from './components/Countdown';
 
@@ -50,7 +49,6 @@ function App() {
       <FAQ />
       <EventDetails />
       <Footer />
-      <WhatsAppChat />
 
       {/* 1) Hidden "official" Mainstack button (script expects this id) */}
       <button

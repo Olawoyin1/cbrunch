@@ -237,7 +237,7 @@ export default function Audience() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="text-center">
-              <button className="group inline-flex items-center gap-3 px-4 md:px-12 py-5 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold text-base md:text-lg rounded hover:shadow transition-all duration-300 hover:scale-105">
+              <button disabled className="group inline-flex items-center gap-3 px-4 md:px-12 py-5 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold text-base md:text-lg rounded hover:shadow transition-all duration-300 hover:scale-105 opacity-50 cursor-not-allowed">
                 Get Your Tickets Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </button>

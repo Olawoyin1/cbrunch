@@ -75,7 +75,7 @@ export default function Gallery() {
              href="https://mainstack.store/thegenzhr/career-brunch"
              >
 
-            <button className="px-10 cursor-pointer py-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold rounded hover:shadow transition-all duration-300 hover:scale-105">
+            <button disabled className="px-10 cursor-not-allowed py-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-bold rounded hover:shadow transition-all duration-300 hover:scale-105 opacity-50">
               Secure Your Spot Now
             </button>
              </a>
